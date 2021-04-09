@@ -1,0 +1,21 @@
+#banner{
+    background-color: blue;
+}
+
+#main{
+    background-color:red;
+}
+#main-post{
+    background-color:grey;
+}
+#side-post{
+    background-color:grey;
+
+}
+#navBar{
+    background-color:green;
+}
+
+#footer{
+    background-color: yellow;
+}

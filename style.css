@@ -1,25 +1,65 @@
 #banner{
-    background-color: blue;
+    background-color: white;
 }
-
+#posts{
+    padding-right: 0;
+    padding-left: 0;    
+    padding-bottom: 0;
+}
 #main{
-    background-color:red;
+    background-color:white;
 }
 #main-post{
-    background-color:grey;
+    background-color:white;
+}
+#posts{
+    background-color:white;
+    border-radius: 5px;
+    border: 5px solid #61777e;
+    margin-bottom: 15px;
 }
 #side-post{
-    background-color:grey;
-
+    background-color:#61777e;
+    color:white;
 }
 #navBar{
-    background-color:green;
+    background-color:#61777e;
 }
 
 #footer{
-    background-color: yellow;
+    background-color: #61777e;
+}
+#tag{
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 3px;
 }
 img {
     max-width: 100%;
     max-height: 100%;
   }
+.post-footer{
+    background-color: #61777e;
+    margin: 0 !important;
+}
+.post-body{
+    margin-bottom: 15px;
+}
+hr.rounded {
+    border-top: 4px solid;
+    border-radius: 2px;
+  }
+.hot-post-right{
+    background-color: #61777e;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.post-divider{
+    color: #61777e;
+}
+.sidepost-header{
+    color: white;
+}

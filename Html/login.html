@@ -9,13 +9,26 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../Css/style.css">
-  <script src="/js/index.js"></script>
+  <script src="../js/index.js"></script>
+  <script type="text/javascript" src="../js/validate.js"></script>
+  
+	<script>
+	function checkPasswordMatch(e) {
+		if(document.getElementById("password").value != document.getElementById("password-check").value){
+			makeRed(document.getElementById("password"));
+			makeRed(document.getElementById("password-check"));
+			alert("The entered passwords do not match. Please try again.");
+			e.preventDefault();
+		}
+	}
+	</script>
+
 </header>
 
 <body>
   <nav id="banner" class="navbar navbar-expand-sm bg-dark navbar-dark" style="height: 144px;">
     <a class="navbar-brand" href="#" style="height: 144px;">
-      <img src="images/Untitled-1.jpg" alt="logo">
+      <img src="../images/Untitled-1.jpg" alt="logo">
     </a>
 
     <ul class="nav navbar-nav navbar-right">
@@ -123,12 +136,52 @@
           </div>
         </div>
 
+		<div class="col-md-4 hot-post-right" id="signup">
+			<div class="sidepost-header">
+				<h3 >Signup</h3>
+				<hr class="rounded">
+			</div>
+			<center>Already a user? <button id="goToLogin">Login</button></center><br><br>
+			<form method="post" action="newuser.php" id="mainForm" >
+				<label class="col-md-5">First Name: </label>
+				<input type="text" name="firstname" id="firstname" class="required">
+				<br><br>
+				<label class="col-md-5">Last Name: </label>
+				<input type="text" name="lastname" id="lastname" class="required">
+				<br><br>
+				<label class="col-md-5">E-mail: </label>
+				<input type="text" name="email" id="email" class="required">
+				<br><br><br>
+				<center><input type="submit" value="Create New User" style="border:none"></center>
+				<br><br>
+			</form>
+		</div>
+
+		<div class="col-md-4 hot-post-right" id="login" style="display:none">
+			<div class="sidepost-header">
+				<h3 >Login</h3>
+				<hr class="rounded">
+			</div>
+			<center>Don't have an account? <button id="goToSignup">Signup</button></center><br><br>
+			<form method="post" action="login.php" id="mainForm" >
+				<label class="col-md-5">Username: </label>
+				<input type="text" name="username" id="username" class="required">
+				<br><br>
+				<label class="col-md-5">Password: </label>
+				<input type="password" name="password" id="password" class="required">
+				<br><br><br>
+				<center><input type="submit" value="Login" style="border:none"></center>
+				<br><br>
+			</form>
+		</div>
+		  
         <div class="col-md-4 hot-post-right">
           <div class="sidepost-header">
             <h3 >Popular Posts</h3>
             <hr class="rounded">
           </div>
-            
+          
+		  
           <div id="side-post" class="post post-thumb">
             <div class="col-md-4">
               <a class="img-thumbnail" href="index.html"><img src="../Css/style.css" alt="Cat pic"></a>

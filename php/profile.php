@@ -42,7 +42,7 @@ if ($error != null) {
         <div id="main-post" class="col-md-8 hot-post-left">
           <div id="posts" class="post post-thumb col-md-12">
             <div class="col-md-12">
-              <h1>Recent Comments</h1>
+              <h1>User profile</h1>
               <hr class="rounded post-divider">
             </div>
             <div class="post-body col-md-12">

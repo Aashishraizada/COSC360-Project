@@ -3,10 +3,12 @@
 if(isset($_SESSION['username'])){
   $logPhp = "logOut.php";
   $logBut = "Log out";
+  $user = "Welcome " . $_SESSION['username'];
 }
 else{
   $logPhp = "login.php";
   $logBut = "Login";
+  $user = '<a class="nav-link" href="signup.php">Sign Up</a>';
 }
 
 echo '<header>
@@ -21,7 +23,8 @@ echo '<header>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="signup.php">Sign Up</a>
+      
+      <a class="nav-link" href="profile.php">'.$user.'</a>
       </li>
     </ul>
   </nav>

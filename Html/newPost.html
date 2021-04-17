@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -8,19 +8,33 @@
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="/Css/style.css">
-  <script src="/js/index.js"></script>
-</header>
+  <link rel="stylesheet" href="../Css/style.css">
+  <script src="../js/index.js"></script>
+  <script type="text/javascript" src="../js/validate.js"></script>
+  
+	<script>
+	function checkPasswordMatch(e) {
+		if(document.getElementById("password").value != document.getElementById("password-check").value){
+			makeRed(document.getElementById("password"));
+			makeRed(document.getElementById("password-check"));
+			alert("The entered passwords do not match. Please try again.");
+			e.preventDefault();
+		}
+	}
+	</script>
+
+</head>
 
 <body>
+<header>
   <nav id="banner" class="navbar navbar-expand-sm bg-dark navbar-dark" style="height: 144px;">
     <a class="navbar-brand" href="#" style="height: 144px;">
-      <img src="images/Untitled-1.jpg" alt="logo">
+      <img src="../images/Untitled-1.jpg" alt="logo">
     </a>
 
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item">
-        <a class="nav-link" href="./Html/login.html">Login</a>
+        <a class="nav-link" href="#">Login</a>
       </li>
 
       <li class="nav-item">
@@ -42,12 +56,18 @@
       <form class="navbar-form navbar-right" action="scripts/search.php">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
+          <select name = "dropdown" class="form-control">
+          <option value = "tag" selected>Tag</option>
+          <option value = "description">Description</option>
+          <option value = "userId">User ID</option>
+          <option value = "other">Other</option>
+          </select>
         </div>
         <button type="submit" class="btn btn-default">Search</button>
       </form>
     </div>
   </nav>
-
+</header>
   <div id="main" class="section">
 
     <div class="container">
@@ -55,103 +75,87 @@
       <div class="row hot-post">
         <div id="main-post" class="col-md-8 hot-post-left">
           <div id="posts" class="post post-thumb col-md-12">
-            <div class="post-header">
-              <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">Main Post 1</a></h3>
-              <ul class="col-md-4 post-meta">
-                <li><a href="author.html">John Doe</a></li>
-                <li>20 April 2018</li>
-              </ul>
-            </div>
             <div class="col-md-12">
               <hr class="rounded post-divider">
             </div>
             <div class="post-body col-md-12">
-              <div class="col-md-7">
-                <a class="post-img" href="blog-post.html" ><img src="images/cat.jpg" alt="cat pic"></a>
-              </div>
-              <div class="col-md-5">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu nibh in ipsum aliquam lacinia.
-                  Proin rutrum accumsan luctus. Maecenas pulvinar est at nisl mattis cursus eu a est. Cras gravida, quam
-                  vitae convallis faucibus, risus massa efficitur lorem, sed iaculis tortor velit vitae lectus. Nullam
-                  sagittis sagittis nisi a laoreet.</p>
-              </div>
-            </div>
-            <div class="post-footer col-md-12">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Comments</a></li>
-                <li><a href="#">Keyword 1</a></li>
-                <li><a href="#">Keyword 2</a></li>
-                <li><a href="#">views</a></li>
-                <li><a href="#">Share</a></li>
-              </ul>
+                <form method="post" action="../scripts/newPost.php" id="mainForm" >
+                         User Name:<br>
+                        <input type="text" name="username" id="username" class="required">
+                        <br>
+                        Title:<br>
+                        <input type="text" name="title" id="title" class="required">
+                        <br>
+                        Content:<br>
+                        <textarea type="text" name="content" id="content" class="required" rows="4" cols ="50">
+                            </textarea>
+                        <br>
+                        Image:<br>
+                        <input type="text" name="image" id="image" class="required" >
+                        <br>
+                        <br><br>
+                        <input type="submit" value="Post">
+                </form>
+  
             </div>
           </div>
+        </div>
 
-          <div id="posts" class="post post-thumb col-md-12">
-            <div class="post-header">
-              <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">Main Post 1</a></h3>
-              <ul class="col-md-4 post-meta">
-                <li><a href="author.html">John Doe</a></li>
-                <li>20 April 2018</li>
-              </ul>
-            </div>
-            <div class="col-md-12">
-              <hr class="rounded post-divider">
-            </div>
-            <div class="post-body col-md-12">
-              <div class="col-md-7">
-                <a class="post-img" href="blog-post.html" ><img src="images/cat.jpg" alt="cat pic"></a>
-              </div>
-              <div class="col-md-5">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu nibh in ipsum aliquam lacinia.
-                  Proin rutrum accumsan luctus. Maecenas pulvinar est at nisl mattis cursus eu a est. Cras gravida, quam
-                  vitae convallis faucibus, risus massa efficitur lorem, sed iaculis tortor velit vitae lectus. Nullam
-                  sagittis sagittis nisi a laoreet.</p>
-              </div>
-            </div>
-            <div class="post-footer col-md-12">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Comments</a></li>
-                <li><a href="#">Keyword 1</a></li>
-                <li><a href="#">Keyword 2</a></li>
-                <li><a href="#">views</a></li>
-                <li><a href="#">Share</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4 hot-post-right">
-          <div class="sidepost-header">
-            <h3 >Popular Tags</h3>
-            <hr class="rounded" >
-          </div>
-            <p id="tag">#keyword1</p>
-            <p id="tag">#keyword2</p>
-            <p id="tag">#keyword3</p>
-            <p id="tag">#keyword4</p>
-            <p id="tag">#keyword5</p>
-            <p id="tag">#keyword6</p>
-        </div>
-        
-      
+		<!-- <div class="col-md-4 hot-post-right" id="signup">
+			<div class="sidepost-header">
+				<h3 >Signup</h3>
+				<hr class="rounded">
+			</div>
+			<center>Already a user? <a id="goToLogin">Login</a></center><br><br>
+			<form method="get" action="../php/fullSignup.php" id="mainForm" >
+				<label class="col-md-5">First Name: </label>
+				<input type="text" name="firstname" id="firstname" class="required">
+				<br><br>
+				<label class="col-md-5">Last Name: </label>
+				<input type="text" name="lastname" id="lastname" class="required">
+				<br><br>
+				<label class="col-md-5">E-mail: </label>
+				<input type="text" name="email" id="email" class="required">
+				<br><br><br>
+				<center><input type="submit" value="Create New User" style="border:none"></center>
+				<br><br>
+			</form>
+		</div> -->
+
+		<div class="col-md-4 hot-post-right" id="login" style="display:none">
+			<div class="sidepost-header">
+				<h3 >Login</h3>
+				<hr class="rounded">
+			</div>
+			<center>Don't have an account? <a id="goToSignup">Signup</a></center><br><br>
+			<form method="post" action="../php/newuser.php" id="mainForm" >
+				<label class="col-md-5">Username: </label>
+				<input type="text" name="username" id="username" class="required">
+				<br><br>
+				<label class="col-md-5">Password: </label>
+				<input type="password" name="password" id="password" class="required">
+				<br><br><br>
+				<center><input type="submit" value="Login" style="border:none"></center>
+				<br><br>
+			</form>
+		</div>
+
       </div>
 
     </div>
 
   </div>
+
+	<footer>
+	<div id="footer" class="footer-bottom row">
+	  <div class="col-md-6">
+		<ul class="footer-nav">
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="about.html">About Us</a></li>
+		  <li><a href="contact.html">Contacts</a></li>
+		</ul>
+	  </div>
+	</div>
+	</footer>
 </body>
-
-<div id="footer" class="footer-bottom row">
-  <div class="col-md-6">
-    <ul class="footer-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contacts</a></li>
-    </ul>
-  </div>
-</div>
-
 </html>

@@ -29,9 +29,9 @@ echo '<header>
   <nav id="navBar" class="navbar navbar-inverse">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php">Home</a></li>
         <li><a href="#">Featured</a></li>
-        <li><a href="#">Post</a></li>
+        <li><a href="newPost.php">Post</a></li>
         <li><a href="#">Forms</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
@@ -40,8 +40,8 @@ echo '<header>
         <div class="form-group">
           <input type="text" id="search" class="form-control" placeholder="Search">
           <select id="category" name = "dropdown" class="form-control">
-          <option value = "2" selected>Tag</option>
-          <option value = "1">Description</option>
+          <option value = "2">Tag</option>
+          <option value = "1" selected>Description</option>
           <option value = "3">Author</option>
           <option value = "4">Other</option>
           </select>

@@ -11,8 +11,6 @@
 			echo "<p>".$_SESSION['error']."</p>";
 			$_SESSION['error'] = "";
 			echo "<br>";
-		}else{
-			echo session_status();
 		}
 	?>
 		Username:<br>

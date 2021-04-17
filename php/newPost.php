@@ -10,6 +10,7 @@
 
 <?php
     if(!isset($_SESSION['username'])){
+        $_SESSION['error'] ="Please log in";
         header("Location: login.php", TRUE, 301);
     }
 ?>

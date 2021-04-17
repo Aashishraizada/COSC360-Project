@@ -59,11 +59,8 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-footer col-md-12">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Comments</a></li>
                   <li><a href="#">Keyword 1</a></li>
                   <li><a href="#">Keyword 2</a></li>
-                  <li><a href="#">views</a></li>
-                  <li><a href="#">Share</a></li>
                 </ul>
               </div>
             </div>';
@@ -98,11 +95,8 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-footer col-md-12">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Comments</a></li>
                   <li><a href="#">Keyword 1</a></li>
                   <li><a href="#">Keyword 2</a></li>
-                  <li><a href="#">views</a></li>
-                  <li><a href="#">Share</a></li>
                 </ul>
               </div>
             </div>';
@@ -137,11 +131,8 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-footer col-md-12">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Comments</a></li>
                   <li><a href="#">Keyword 1</a></li>
                   <li><a href="#">Keyword 2</a></li>
-                  <li><a href="#">views</a></li>
-                  <li><a href="#">Share</a></li>
                 </ul>
               </div>
             </div>';
@@ -176,11 +167,8 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-footer col-md-12">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Comments</a></li>
                   <li><a href="#">Keyword 1</a></li>
                   <li><a href="#">Keyword 2</a></li>
-                  <li><a href="#">views</a></li>
-                  <li><a href="#">Share</a></li>
                 </ul>
               </div>
             </div>';
@@ -215,11 +203,8 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-footer col-md-12">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Comments</a></li>
                   <li><a href="#">Keyword 1</a></li>
                   <li><a href="#">Keyword 2</a></li>
-                  <li><a href="#">views</a></li>
-                  <li><a href="#">Share</a></li>
                 </ul>
               </div>
             </div>';
@@ -251,11 +236,8 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-footer col-md-12">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Comments</a></li>
                   <li><a href="#">Keyword 1</a></li>
                   <li><a href="#">Keyword 2</a></li>
-                  <li><a href="#">views</a></li>
-                  <li><a href="#">Share</a></li>
                 </ul>
               </div>
             </div>';

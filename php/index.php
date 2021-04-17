@@ -28,6 +28,7 @@
          }
 		showPosts();
 		$("#search").keyup(showPosts);
+    
 	});
   
 </script>

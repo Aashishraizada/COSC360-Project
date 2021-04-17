@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-<?php include "header.php"; ?>
+<?php include "header1.php"; ?>
+<?php include "header2.php"; ?>
 <body>
-	<form method="post" action="checkUser.php" id="mainForm">
+	<form method="post" action="checkUser.php" id="loginForm">
 		Username:<br>
 		<input type="text" name="username" id="username" class="required">
 		<br>

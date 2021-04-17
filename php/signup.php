@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<?php include "header.php"; ?>
+<?php include "header1.php"; ?>
+<?php include "header2.php"; ?>
 <?php
 
 $fname = NULL;
@@ -25,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 ?>
 
 <body>
-	<form method="post" action="addUser.php" id="mainForm">
+	<form method="post" action="addUser.php" id="signUpForm">
 		First Name:<br>
 		<input type="text" name="firstname" value="<?php echo $fname; ?>" id="firstname" class="required">
 		<br>

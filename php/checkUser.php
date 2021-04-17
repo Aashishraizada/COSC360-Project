@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<?php include "header.php"; ?>
 <?php
 
 $uname = NULL;

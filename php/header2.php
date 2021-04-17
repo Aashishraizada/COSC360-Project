@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <?php
+echo "hey";
+if(isset($_SESSION['username'])){
+  $logPhp = "logOut.php";
+  $logBut = "log Out";
+}
+else{
+  $logPhp = "login.php";
+  $logBut = "Login";
+}
+
 echo '<header>
   <nav id="banner" class="navbar navbar-expand-sm bg-dark navbar-dark" style="height: 144px;">
     <a class="navbar-brand" href="#" style="height: 144px;">
@@ -9,7 +19,7 @@ echo '<header>
 
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item">
-        <a class="nav-link" href="login.php">Login</a>
+        <a class="nav-link" href="'.$logPhp.'">"'.$logBut.'"</a>
       </li>
 
       <li class="nav-item">

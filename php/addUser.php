@@ -47,11 +47,12 @@ else {
 		echo "<p>User already exists with this name and/or email.</p>";
 		if(isset($_SERVER['HTTP_REFERER'])) {
 			$ref = $_SERVER['HTTP_REFERER'];
-			echo "<a href='".$ref."'>Return to user entry</a>";
+			$_SESSION["username"] = $row["username"];
+			header("Location: index.php", TRUE, 301);
 		}
 	}
 	else {
-		$sql_new = "INSERT INTO users (firstname, lastname, username, email, password) VALUES ('".$fname."', '".$lname."', '".$uname."', '".$email."', '".md5($pswd)."')";
+		$sql_new = "INSERT INTO Users (firstname, lastname, username, email, password) VALUES ('".$fname."', '".$lname."', '".$uname."', '".$email."', '".md5($pswd)."')";
 		if(mysqli_query($connection, $sql_new)) {
 			echo "<p>An account for the user '".$fname."' has been created</p>";
 		}

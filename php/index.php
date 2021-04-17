@@ -1,14 +1,16 @@
+<?php include "sessionHeader.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include "header1.php"; ?>
 
+<?php include "header1.php"; ?>
 <script>
 
   
 </script>
 
 <body>
+
   <?php include "header2.php"; ?>
   <div id="main" class="section">
 

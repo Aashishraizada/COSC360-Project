@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html>
 <?php
-echo "hey";
 if(isset($_SESSION['username'])){
   $logPhp = "logOut.php";
-  $logBut = "log Out";
+  $logBut = "Log out";
 }
 else{
   $logPhp = "login.php";
@@ -13,13 +11,13 @@ else{
 
 echo '<header>
   <nav id="banner" class="navbar navbar-expand-sm bg-dark navbar-dark" style="height: 144px;">
-    <a class="navbar-brand" href="#" style="height: 144px;">
+    <a class="navbar-brand" href="index.php" style="height: 144px;">
       <img src="../images/Untitled-1.jpg" alt="logo">
     </a>
 
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item">
-        <a class="nav-link" href="'.$logPhp.'">"'.$logBut.'"</a>
+        <a class="nav-link" href="'.$logPhp.'">'.$logBut.'</a>
       </li>
 
       <li class="nav-item">
@@ -56,4 +54,3 @@ echo '<header>
 
 ?>
 
-</html>

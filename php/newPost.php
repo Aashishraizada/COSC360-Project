@@ -13,8 +13,8 @@
         header("Location: login.php", TRUE, 301);
     }
 ?>
-<?php   
-echo'
+
+
 <body>
     <div id="main" class="section">
         <div class="container">
@@ -27,14 +27,18 @@ echo'
                             <hr class="rounded post-divider">
                         </div>
                         <div class="post-body col-md-12">
+                            <?php 
+                            if(isset($_SESSION['success'])){
+                                echo $_SESSION['success'];
+                                $_SESSION['success']="";
+                            }
+                            ?>
                             <form method="post" action="../php/submitPost.php" id="mainForm">
-                                <br>
                                 Title:<br>
                                 <input type="text" name="title" id="title" class="required">
                                 <br>
                                 Content:<br>
-                                <textarea type="text" name="content" id="content" class="required" rows="4" cols="50">
-                            </textarea>
+                                <textarea type="text" name="content" id="content" class="required" rows="4" cols="50"></textarea>
                                 <br>
                                 Image:<br>
                                 <input type="text" name="image" id="image" class="required">
@@ -106,4 +110,3 @@ echo'
 </body>
 
 </html>
-' ?>

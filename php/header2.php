@@ -30,10 +30,10 @@ echo '<header>
     <div class="container-fluid">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.php">Home</a></li>
-        <li><a href="#">Featured</a></li>
+        <li><a href="index.php">Featured</a></li>
         <li><a href="newPost.php">Post</a></li>
         <li><a href="#">Forms</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="../html/about.html">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <form class="navbar-form navbar-right" action="scripts/search.php">

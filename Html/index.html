@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,9 +23,10 @@
 	}
 	</script>
 
-</header>
+</head>
 
 <body>
+<header>
   <nav id="banner" class="navbar navbar-expand-sm bg-dark navbar-dark" style="height: 144px;">
     <a class="navbar-brand" href="#" style="height: 144px;">
       <img src="../images/Untitled-1.jpg" alt="logo">
@@ -60,7 +61,7 @@
       </form>
     </div>
   </nav>
-
+</header>
   <div id="main" class="section">
 
     <div class="container">
@@ -141,8 +142,8 @@
 				<h3 >Signup</h3>
 				<hr class="rounded">
 			</div>
-			<center>Already a user? <button id="goToLogin">Login</button></center><br><br>
-			<form method="post" action="newuser.php" id="mainForm" >
+			<center>Already a user? <a id="goToLogin">Login</a></center><br><br>
+			<form method="post" action="../php/fullSignup.php" id="mainForm" >
 				<label class="col-md-5">First Name: </label>
 				<input type="text" name="firstname" id="firstname" class="required">
 				<br><br>
@@ -162,8 +163,8 @@
 				<h3 >Login</h3>
 				<hr class="rounded">
 			</div>
-			<center>Don't have an account? <button id="goToSignup">Signup</button></center><br><br>
-			<form method="post" action="login.php" id="mainForm" >
+			<center>Don't have an account? <a id="goToSignup">Signup</a></center><br><br>
+			<form method="post" action="../php/newuser.php" id="mainForm" >
 				<label class="col-md-5">Username: </label>
 				<input type="text" name="username" id="username" class="required">
 				<br><br>
@@ -233,16 +234,17 @@
     </div>
 
   </div>
+
+	<footer>
+	<div id="footer" class="footer-bottom row">
+	  <div class="col-md-6">
+		<ul class="footer-nav">
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="about.html">About Us</a></li>
+		  <li><a href="contact.html">Contacts</a></li>
+		</ul>
+	  </div>
+	</div>
+	</footer>
 </body>
-
-<div id="footer" class="footer-bottom row">
-  <div class="col-md-6">
-    <ul class="footer-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contacts</a></li>
-    </ul>
-  </div>
-</div>
-
 </html>

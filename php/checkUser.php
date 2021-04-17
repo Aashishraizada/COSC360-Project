@@ -33,12 +33,12 @@ if($error != null) {
 	exit($output);
 }
 else {
-    $sql = "SELECT * FROM Users WHERE id='1' OR email='".$email."';";
+    $sql = "SELECT * FROM Users WHERE username='".$uname."' AND pswd='".$pswd."';";
     $results = mysqli_query($connection, $sql);
     //and fetch requsults
 	if(mysqli_num_rows($results)) {
-		$row = mysqli_
-		echo "<p>User already exists with this name and/or email.</p>";
+		$row = mysqli_fetch_assoc($results);
+		$_SESSION["username"] = $row["username"];
 		if(isset($_SERVER['HTTP_REFERER'])) {
 			$ref = $_SERVER['HTTP_REFERER'];
 			echo "<a href='".$ref."'>Return to user entry</a>";

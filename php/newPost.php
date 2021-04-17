@@ -1,12 +1,22 @@
+<?php if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+?>
 <?php include "sessionHeader.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include "header1.php"; ?>
 <?php include "header2.php"; ?>
 
+<?php
+    if(!isset($_SESSION['username'])){
+        header("Location: login.php", TRUE, 301);
+    }
+?>
+<?php   
+echo'
 <body>
     <div id="main" class="section">
-
         <div class="container">
 
             <div class="row hot-post">
@@ -17,16 +27,7 @@
                             <hr class="rounded post-divider">
                         </div>
                         <div class="post-body col-md-12">
-                            <?php
-                            if (isset($_SESSION['success'])) {
-                                echo "<p>" . $_SESSION['success'] . "</p>";
-                                $_SESSION['success'] = "";
-                                echo "<br>";
-                            }
-                            ?>
                             <form method="post" action="../php/submitPost.php" id="mainForm">
-                                User Name:<br>
-                                <input type="text" name="username" id="username" class="required">
                                 <br>
                                 Title:<br>
                                 <input type="text" name="title" id="title" class="required">
@@ -72,7 +73,7 @@
                         <h3>Login</h3>
                         <hr class="rounded">
                     </div>
-                    <center>Don't have an account? <a id="goToSignup">Signup</a></center><br><br>
+                    <center>Dont have an account? <a id="goToSignup">Signup</a></center><br><br>
                     <form method="post" action="../php/newuser.php" id="mainForm">
                         <label class="col-md-5">Username: </label>
                         <input type="text" name="username" id="username" class="required">
@@ -105,3 +106,4 @@
 </body>
 
 </html>
+' ?>

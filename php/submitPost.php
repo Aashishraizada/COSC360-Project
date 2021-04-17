@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $output = "<p>Invalid request.</p>";
     exit($output);
 } else if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['username']) && isset($_POST['title']) && isset($_POST['content']) && isset($_POST['image'])) {
-        $uname = $_POST['username'];
+    if ( isset($_POST['title']) && isset($_POST['content']) && isset($_POST['image'])) {
+        $uname = $_SESSION['username'];
         $title = $_POST['title'];
         $content = $_POST['content'];
         $image = $_POST['image'];
@@ -42,8 +42,8 @@ if ($error != null) {
         $_SESSION['success'] = "<p>A post has been created!";
         header("Location: newPost.php", TRUE, 301);
     } else {
-        $output = "<p>Unable to create post" . $sql_new . "" . mysqli_error($connection) . "</p>";
-        exit($output);
+        $_SESSION['success'] = "<p>Unable to create post, try again!";
+        header("Location: newPost.php", TRUE, 301);
     }
 }
 mysqli_close($connection);

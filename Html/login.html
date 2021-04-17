@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<header>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -9,24 +9,45 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../Css/style.css">
-  <script src="../js/index.js"></script>
-  <script type="text/javascript" src="../js/validate.js"></script>
-  
-	<script>
-	function checkPasswordMatch(e) {
-		if(document.getElementById("password").value != document.getElementById("password-check").value){
-			makeRed(document.getElementById("password"));
-			makeRed(document.getElementById("password-check"));
-			alert("The entered passwords do not match. Please try again.");
-			e.preventDefault();
-		}
-	}
-	</script>
-
-</head>
+  <script src="/js/index.js"></script>
+</header>
 
 <body>
-<?php include "../php/header.php"; ?>
+  <nav id="banner" class="navbar navbar-expand-sm bg-dark navbar-dark" style="height: 144px;">
+    <a class="navbar-brand" href="#" style="height: 144px;">
+      <img src="images/Untitled-1.jpg" alt="logo">
+    </a>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sign Up</a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav id="navBar" class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Featured</a></li>
+        <li><a href="#">Post</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" action="scripts/search.php">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+    </div>
+  </nav>
+
   <div id="main" class="section">
 
     <div class="container">
@@ -102,52 +123,12 @@
           </div>
         </div>
 
-		<div class="col-md-4 hot-post-right" id="signup">
-			<div class="sidepost-header">
-				<h3 >Signup</h3>
-				<hr class="rounded">
-			</div>
-			<center>Already a user? <a id="goToLogin">Login</a></center><br><br>
-			<form method="get" action="../php/fullSignup.php" id="mainForm" >
-				<label class="col-md-5">First Name: </label>
-				<input type="text" name="firstname" id="firstname" class="required">
-				<br><br>
-				<label class="col-md-5">Last Name: </label>
-				<input type="text" name="lastname" id="lastname" class="required">
-				<br><br>
-				<label class="col-md-5">E-mail: </label>
-				<input type="text" name="email" id="email" class="required">
-				<br><br><br>
-				<center><input type="submit" value="Create New User" style="border:none"></center>
-				<br><br>
-			</form>
-		</div>
-
-		<div class="col-md-4 hot-post-right" id="login" style="display:none">
-			<div class="sidepost-header">
-				<h3 >Login</h3>
-				<hr class="rounded">
-			</div>
-			<center>Don't have an account? <a id="goToSignup">Signup</a></center><br><br>
-			<form method="post" action="../php/newuser.php" id="mainForm" >
-				<label class="col-md-5">Username: </label>
-				<input type="text" name="username" id="username" class="required">
-				<br><br>
-				<label class="col-md-5">Password: </label>
-				<input type="password" name="password" id="password" class="required">
-				<br><br><br>
-				<center><input type="submit" value="Login" style="border:none"></center>
-				<br><br>
-			</form>
-		</div>
-		  
         <div class="col-md-4 hot-post-right">
           <div class="sidepost-header">
             <h3 >Popular Posts</h3>
             <hr class="rounded">
           </div>
-          
-		  
+            
           <div id="side-post" class="post post-thumb">
             <div class="col-md-4">
               <a class="img-thumbnail" href="index.html"><img src="../Css/style.css" alt="Cat pic"></a>
@@ -199,17 +180,16 @@
     </div>
 
   </div>
-
-	<footer>
-	<div id="footer" class="footer-bottom row">
-	  <div class="col-md-6">
-		<ul class="footer-nav">
-		  <li><a href="index.html">Home</a></li>
-		  <li><a href="about.html">About Us</a></li>
-		  <li><a href="contact.html">Contacts</a></li>
-		</ul>
-	  </div>
-	</div>
-	</footer>
 </body>
+
+<div id="footer" class="footer-bottom row">
+  <div class="col-md-6">
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+    </ul>
+  </div>
+</div>
+
 </html>

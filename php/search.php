@@ -41,7 +41,7 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-header">
                 <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                  <li><a href="author.html">' . $row['username'] . '</a></li>
+                <li><a href="author.php?username="'.$row['username'].'">' .$row['username']. '</a></li>
                   <li>' . $row['date'] . '</li>
                 </ul>
               </div>
@@ -80,7 +80,7 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-header">
                 <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                  <li><a href="author.html">' . $row['username'] . '</a></li>
+                  <li><a href="author.php?uname="'.$row['username'].'">' . $row['username'] . '</a></li>
                   <li>' . $row['date'] . '</li>
                 </ul>
               </div>
@@ -119,7 +119,7 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-header">
                 <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                  <li><a href="author.html">' . $row['username'] . '</a></li>
+                <li><a href="author.php?uname="'.$row['username'].'">' . $row['username'] . '</a></li>
                   <li>' . $row['date'] . '</li>
                 </ul>
               </div>
@@ -158,7 +158,7 @@ if (!is_null($key) && !empty($key)) {
               <div class="post-header">
                 <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                  <li><a href="author.html">' . $row['username'] . '</a></li>
+                <li><a href="author.php?uname="'.$row['username'].'">' . $row['username'] . '</a></li>
                   <li>' . $row['date'] . '</li>
                 </ul>
               </div>

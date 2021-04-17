@@ -2,10 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include "header1.php"; ?>
-<?php include "header2.php"; ?>
+
 <?php
 if (isset($_SESSION['username'])) {
   $uname = $_SESSION['username'];
+}
+if(!isset($_POST['username'])){
+    //header("Location: index.php", TRUE, 301);
 }
 
 $host = "sql3.freesqldatabase.com";
@@ -20,7 +23,7 @@ if ($error != null) {
   $output = "<p>Unable to connect to database!</p>";
   exit($output);
 } else {
-  $sql = "SELECT * FROM Users WHERE username = '" . $uname . "'";
+  $sql = "SELECT * FROM Users WHERE username = '". $_POST['username']."'";
   $results = mysqli_query($connection, $sql);
   while ($row = mysqli_fetch_assoc($results)) {
     $fname = $row['firstName'];
@@ -33,7 +36,7 @@ if ($error != null) {
 ?>
 
 <body>
-
+<?php include "header2.php"; ?>
   <div id="main" class="section">
 
     <div class="container">
@@ -53,30 +56,23 @@ if ($error != null) {
               }
               
               ?>
-              <form method="post" action="../php/editProfile.php" id="mainForm">
+              <form method="post" action="index.php" id="mainForm">
                 User Name:<br>
-                <input type="text" name="username" id="username" value="<?php echo $uname; ?>" class="required">
+                <input type="text" name="username" id="username" value="<?php echo $uname; ?>" class="required readonly">
                 <br>
                 First Name:<br>
-                <input type="text" name="firstname" id="firstname" value="<?php echo $fname; ?>" class="required">
+                <input type="text" name="firstname" id="firstname" value="<?php echo $fname; ?>" class="required readonly">
                 <br>
                 Last Name:<br>
-                <input type="text" name="lastname" id="lastname" value="<?php echo $lname; ?>" class="required">
+                <input type="text" name="lastname" id="lastname" value="<?php echo $lname; ?>" class="required readonly">
                 <br>
                 Image:<br>
-                <input type="text" name="image" id="image" value="<?php echo $image; ?>" class="required">
+                <input type="text" name="image" id="image" value="<?php echo $image; ?>" class="required readonly">
                 <br>
                 Email:<br>
-                <input type="text" name="email" id="email" value="<?php echo $email; ?>" class="required">
+                <input type="text" name="email" id="email" value="<?php echo $email; ?>" class="required readonly">
                 <br>
-                <h4>Enter and confirm password to make changes to your account:</h4>
-                Password:<br>
-                <input type="password" name="password" id="password" class="required">
-                <br>
-                Confirm Password<br>
-                <input type="password" name="password" id="password" class="required">
-                <br>
-                <input type="submit" value="Make changes">
+                <input type="submit" value="Back to home">
               </form>
             </div>
           </div>

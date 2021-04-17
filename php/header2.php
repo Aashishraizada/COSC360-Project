@@ -24,7 +24,7 @@ echo '<header>
 
       <li class="nav-item">
       
-      <a class="nav-link" href="profile.php">'.$user.'</a>
+      <a  class="nav-link" href="profile.php">'.$user.'</a>
       </li>
     </ul>
   </nav>
@@ -32,7 +32,7 @@ echo '<header>
   <nav id="navBar" class="navbar navbar-inverse">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-        <li"><a href="index.php">Home</a></li>
+        <li class="active"><a href="index.php">Home</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="index.php">Featured</a></li>
         <li><a href="newPost.php">New Post</a></li>

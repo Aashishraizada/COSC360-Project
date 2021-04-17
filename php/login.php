@@ -1,6 +1,4 @@
-<?php 
-session_start();
-?>
+<?php include "sessionHeader.php"; ?>
 <!DOCTYPE html>
 <html>
 <?php include "header1.php"; ?>
@@ -9,9 +7,9 @@ session_start();
 	<form method="post" action= "checkUser.php" id="loginForm">
 		
 	<?php 
-		if( isset($_SESSION['username'])){
+		if( isset($_SESSION['error'])){
 			echo "<p>".$_SESSION['error']."</p>";
-			$_SESSION['error'] = null;
+			$_SESSION['error'] = "";
 			echo "<br>";
 		}else{
 			echo session_status();

@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
 echo '<header>
   <nav id="banner" class="navbar navbar-expand-sm bg-dark navbar-dark" style="height: 144px;">
     <a class="navbar-brand" href="#" style="height: 144px;">

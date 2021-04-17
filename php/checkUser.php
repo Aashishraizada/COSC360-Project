@@ -1,3 +1,4 @@
+<?php include "sessionHeader.php"; ?>
 <!DOCTYPE html>
 <html>
 <?php
@@ -6,7 +7,7 @@ $uname = NULL;
 $pswd = NULL;
 
 if($_SERVER["REQUEST_METHOD"] == "GET") {
-  $output = "<p>Invalid request.</p>";
+  $output = "<p>Invalid request.</p>";	
   exit($output);
 }
 else if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -48,7 +49,7 @@ else {
 			// 	$ref = $_SERVER['HTTP_REFERER'];
 			// 	echo "<a href='".$ref."'>Return to user entry</a>";
 			// }
-			header("Location: index.php", TRUE, 301);
+			header("Location: login.php", TRUE, 301);
 			//exit();
 			
 	}

@@ -76,24 +76,67 @@
         <div id="main-post" class="col-md-8 hot-post-left">
           <div id="posts" class="post post-thumb col-md-12">
             <div class="col-md-12">
+            <h1>Recent Comments</h1>
               <hr class="rounded post-divider">
             </div>
             <div class="post-body col-md-12">
                 <form method="post" action="../scripts/newPost.php" id="mainForm" >
-                         User Name:<br>
+                         User Name:
                         <input type="text" name="username" id="username" class="required">
                         <br>
-                        Title:<br>
+                        First Name:<br>
                         <input type="text" name="title" id="title" class="required">
                         <br>
-                        Content:<br>
-                        <textarea type="text" name="content" id="content" class="required" rows="4" cols ="50">
-                            </textarea>
+                        Last Name:<br>
+                        <input type="text" name="title" id="title" class="required">
                         <br>
                         Image:<br>
                         <input type="text" name="image" id="image" class="required" >
                         <br>
-                        <br><br>
+                        Email:<br>
+                        <input type="text" name="title" id="title" class="required">
+                        <br>
+                        Password:<br>
+                        <input type="text" name="title" id="title" class="required">
+                        <br>
+                        Confirm Password<br>
+                        <input type="text" name="title" id="title" class="required">
+                        <br>
+                        <input type="submit" value="Post">
+                </form>
+  
+            </div>
+          </div>
+        </div>
+        <div id="main-post" class="col-md-8 hot-post-left">
+          <div id="posts" class="post post-thumb col-md-12">
+            <div class="col-md-12">
+            <h1>Recent Comments</h1>
+              <hr class="rounded post-divider">
+            </div>
+            <div class="post-body col-md-12">
+                <form method="post" action="../scripts/newPost.php" id="mainForm" >
+                         User Name:
+                        <input type="text" name="username" id="username" class="required">
+                        <br>
+                        First Name:<br>
+                        <input type="text" name="title" id="title" class="required">
+                        <br>
+                        Last Name:<br>
+                        <input type="text" name="title" id="title" class="required">
+                        <br>
+                        Image:<br>
+                        <input type="text" name="image" id="image" class="required" >
+                        <br>
+                        Email:<br>
+                        <input type="text" name="title" id="title" class="required">
+                        <br>
+                        Password:<br>
+                        <input type="text" name="title" id="title" class="required">
+                        <br>
+                        Confirm Password<br>
+                        <input type="text" name="title" id="title" class="required">
+                        <br>
                         <input type="submit" value="Post">
                 </form>
   
@@ -103,12 +146,13 @@
 
 		<div class="col-md-4 hot-post-right" id="signup">
 			<div class="sidepost-header">
-				<h3 >Signup</h3>
+				<h3 >User Changes</h3>
 				<hr class="rounded">
 			</div>
-			<center>Already a user? <a id="goToLogin">Login</a></center><br><br>
 			<form method="get" action="../php/fullSignup.php" id="mainForm" >
-				<label class="col-md-5">First Name: </label>
+            <label class="col-md-5">User Name: </label>
+				<input type="text" name="User name" id="firstname" class="required"><br>
+                <label class="col-md-5">First Name: </label><br>
 				<input type="text" name="firstname" id="firstname" class="required">
 				<br><br>
 				<label class="col-md-5">Last Name: </label>
@@ -116,8 +160,14 @@
 				<br><br>
 				<label class="col-md-5">E-mail: </label>
 				<input type="text" name="email" id="email" class="required">
-				<br><br><br>
-				<center><input type="submit" value="Create New User" style="border:none"></center>
+				<br><br>
+                <label class="col-md-5">Password: </label>
+				<input type="text" name="email" id="email" class="required"><br>
+                <br>
+                <label class="col-md-5">Confirm-Password </label>
+                <br>
+				<input type="text" name="email" id="email" class="required">
+				<center><input type="submit" value="Confirm Changes" style="border:none"></center>
 				<br><br>
 			</form>
 		</div>

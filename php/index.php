@@ -1,33 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../Css/style.css">
-  <script src="../js/index.js"></script>
-  <script type="text/javascript" src="../js/validate.js"></script>
-
-  <script>
-    function checkPasswordMatch(e) {
-      if (document.getElementById("password").value != document.getElementById("password-check").value) {
-        makeRed(document.getElementById("password"));
-        makeRed(document.getElementById("password-check"));
-        alert("The entered passwords do not match. Please try again.");
-        e.preventDefault();
-      }
-    }
-  </script>
+<?php include "header1.php"; ?>
 
 </head>
 
 <body>
-  <?php include "header.php"; ?>
+  <?php include "header2.php"; ?>
   <div id="main" class="section">
 
     <div class="container">
@@ -97,7 +76,7 @@
             <hr class="rounded">
           </div>
           <center>Already a user? <a id="goToLogin">Login</a></center><br><br>
-          <form method="get" action="../php/fullSignup.php" id="mainForm">
+          <form method="get" action="../php/signup.php" id="loginForm">
             <label class="col-md-5">First Name: </label>
             <input type="text" name="firstname" id="firstname" class="required">
             <br><br>
@@ -118,7 +97,7 @@
             <hr class="rounded">
           </div>
           <center>Don't have an account? <a id="goToSignup">Signup</a></center><br><br>
-          <form method="post" action="../php/newuser.php" id="mainForm">
+          <form method="post" action="../php/newuser.php" id="signUpForm">
             <label class="col-md-5">Username: </label>
             <input type="text" name="username" id="username" class="required">
             <br><br>

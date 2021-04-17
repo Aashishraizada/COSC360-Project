@@ -17,23 +17,28 @@ function makeClean(inputDiv){
 	inputDiv.style.borderColor="#FFFFFF";
 }
 
-window.onload = function()
-{
+window.onload = function() {
     var mainForm = document.getElementById("mainForm");
     var requiredInputs = document.querySelectorAll(".required");
 
 
     var goToLogin = document.getElementById("goToLogin");
-	  goToLogin.onclick = function() {
-        document.getElementById("signup").style.display = "none";
- 		    document.getElementById("login").style.display = "block"; 
+      if(goToLogin != null) {
+        goToLogin.onclick = function() {
+          document.getElementById("signup").style.display = "none";
+          document.getElementById("login").style.display = "block"; 
+      }
     }
+    
     var goToSignup = document.getElementById("goToSignup");
-    goToSignup.onclick = function() {
-        document.getElementById("login").style.display = "none";
-        document.getElementById("signup").style.display = "block"; 
+    
+    if(goToSignup != null) {
+      goToSignup.onclick = function() {
+          document.getElementById("login").style.display = "none";
+          document.getElementById("signup").style.display = "block"; 
     }
-
+  }
+  if(mainForm != null) {
     mainForm.onsubmit = function(e)
     {
 	     var requiredInputs = document.querySelectorAll(".required");
@@ -61,4 +66,5 @@ window.onload = function()
         checkPasswordMatch(e);
       }
     }
+  }
 }

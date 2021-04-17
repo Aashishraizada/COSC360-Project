@@ -20,12 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 if (!is_null($key) && !empty($key)) {
 
-    $serverName = "";
-    $username = "";
-    $password = "";
-    $database = "";
+	$host = "sql3.freesqldatabase.com";
+	$database = "sql3404847";
+	$user = "sql3404847";
+	$password = "TuyFjKXzrh";
 
-    $connection = new mysqli($serverName, $username, $password, $database);
+    $connection = new mysqli($host, $user, $password, $database);
 
     if ($connection->connect_error) {
         die("Connection failed: " . $connection->connect_error);
@@ -139,13 +139,48 @@ if (!is_null($key) && !empty($key)) {
               </div>
             </div>';
             }
-        } else {//posts from all users
-            $key = MySQLi_real_escape_string($connection, $key);
+        } else if($num == 4){//posts from all users
             $sql = "SELECT * FROM Post";
 
             $results = mysqli_query($connection, $sql);
             while ($row = mysqli_fetch_assoc($results)) {
                 echo '<div id="posts" class="post post-thumb col-md-12">
+              <div class="post-header">
+                <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
+                <ul class="col-md-4 post-meta">
+                  <li><a href="author.html">' . $row['username'] . '</a></li>
+                  <li>' . $row['date'] . '</li>
+                </ul>
+              </div>
+              <div class="col-md-12">
+                <hr class="rounded post-divider">
+              </div>
+              <div class="post-body col-md-12">
+                <div class="col-md-7">
+                  <a class="post-img" href="blog-post.html" ><img src="../images/cat.jpg" alt="cat pic"></a>
+                </div>
+                <div class="col-md-5">
+                  <p>' . $row['content'] . '</p>
+                </div>
+              </div>
+              <div class="post-footer col-md-12">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Comments</a></li>
+                  <li><a href="#">Keyword 1</a></li>
+                  <li><a href="#">Keyword 2</a></li>
+                  <li><a href="#">views</a></li>
+                  <li><a href="#">Share</a></li>
+                </ul>
+              </div>
+            </div>';
+            }
+        }  else if($num == 5){//3 posts
+            $sql = "SELECT * FROM Post LIMIT 2";
+			echo '<p>No matching posts found. Please try again.</p>';
+            $results = mysqli_query($connection, $sql);
+            while ($row = mysqli_fetch_assoc($results)) {
+                echo '<div id="posts" class="post post-thumb col-md-12" style="visibility:hidden">
               <div class="post-header">
                 <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
                 <ul class="col-md-4 post-meta">

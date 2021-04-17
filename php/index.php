@@ -2,10 +2,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <?php include "header1.php"; ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-
+	$(document).ready(function(){
+		var key = "";
+		function showPosts() {
+            key = $("#search").val() == ""? "empty":$("#search").val();
+			var n = $("#category").val();
+			if(key === "empty") {
+				n = 4;
+			}
+            $.post("search.php", {keyword: key, num: n})
+            .done(function(data) {
+				if(data === "") {
+					$.post("search.php", {keyword: key, num: 5})
+					.done(function(data) {
+						$("#main-post").html(data);
+						$(".post").style.visibility="hidden";
+					});
+				}
+				else {
+					$("#main-post").html(data);
+				}
+            });
+         }
+		showPosts();
+		$("#search").keyup(showPosts);
+	});
   
 </script>
 
@@ -18,29 +42,7 @@
 
       <div class="row hot-post">
         <div id="main-post" class="col-md-8 hot-post-left">
-          <?php
-          $host = "sql3.freesqldatabase.com";
-          $database = "sql3404847";
-          $user = "sql3404847";
-          $password = "TuyFjKXzrh";
-
-          $connection = mysqli_connect($host, $user, $password, $database);
-          $error = mysqli_connect_error();
-
-          if ($error != null) {
-            $output = "<p>Unable to connect to database!</p>";
-            exit($output);
-          } else {
-            $sql = "SELECT * FROM Post";
-            $results = mysqli_query($connection, $sql);
-
-            //and fetch requsults
-            
-          }
-
-          mysqli_free_result($results);
-          mysqli_close($connection);
-          ?>
+          
         </div>
 
         <div class="col-md-4 hot-post-right" id="signup">

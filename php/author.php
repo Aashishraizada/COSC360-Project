@@ -4,13 +4,16 @@
 <?php include "header1.php"; ?>
 
 <?php
-if (isset($_SESSION['username'])) {
-  $uname = $_SESSION['username'];
+if(!isset($_GET['username'])){
+    header("Location: index.php", TRUE, 301);
 }
-if(!isset($_POST['username'])){
-    //header("Location: index.php", TRUE, 301);
-}
+$fname = null;
+$lname = null;
+$email = null;
+$pswd = null;
+$image = null;
 
+$username=trim($_GET['username']);
 $host = "sql3.freesqldatabase.com";
 $database = "sql3404847";
 $user = "sql3404847";
@@ -23,15 +26,14 @@ if ($error != null) {
   $output = "<p>Unable to connect to database!</p>";
   exit($output);
 } else {
-  $sql = "SELECT * FROM Users WHERE username = '". $_POST['username']."'";
+  $sql = "SELECT * FROM Users WHERE username = 'lilmergo'";
   $results = mysqli_query($connection, $sql);
-  while ($row = mysqli_fetch_assoc($results)) {
+  $row = mysqli_fetch_assoc($results);
     $fname = $row['firstName'];
     $lname = $row['lastName'];
     $email = $row['email'];
-    $pswd = $row['password'];
     $image = $row['image'];
-  }
+  
 }
 ?>
 
@@ -45,7 +47,7 @@ if ($error != null) {
         <div id="main-post" class="col-md-8 hot-post-left">
           <div id="posts" class="post post-thumb col-md-12">
             <div class="col-md-12">
-              <h1>User profile</h1>
+              <h1><?php echo $username ?>  profile</h1>
               <hr class="rounded post-divider">
             </div>
             <div class="post-body col-md-12">
@@ -57,20 +59,20 @@ if ($error != null) {
               
               ?>
               <form method="post" action="index.php" id="mainForm">
-                User Name:<br>
-                <input type="text" name="username" id="username" value="<?php echo $uname; ?>" class="required readonly">
+                User Name: 
+                <?php echo $username; ?>"
                 <br>
-                First Name:<br>
-                <input type="text" name="firstname" id="firstname" value="<?php echo $fname; ?>" class="required readonly">
+                First Name:
+                <?php echo $fname; ?>
                 <br>
-                Last Name:<br>
-                <input type="text" name="lastname" id="lastname" value="<?php echo $lname; ?>" class="required readonly">
+                Last Name:
+               <?php echo $lname; ?>
                 <br>
-                Image:<br>
-                <input type="text" name="image" id="image" value="<?php echo $image; ?>" class="required readonly">
+                Image:
+                <?php echo $image; ?>
                 <br>
-                Email:<br>
-                <input type="text" name="email" id="email" value="<?php echo $email; ?>" class="required readonly">
+                Email:
+                <?php echo $email; ?>
                 <br>
                 <input type="submit" value="Back to home">
               </form>

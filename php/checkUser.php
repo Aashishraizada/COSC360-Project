@@ -10,7 +10,8 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
   exit($output);
 }
 else if($_SERVER["REQUEST_METHOD"] == "POST") {
-	if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']))
+	if (isset($_POST['username']) && isset($_POST['password'])){
+		
 		$uname = $_POST['username'];
 		$pswd = $_POST['password'];
 	}
@@ -33,16 +34,23 @@ if($error != null) {
 	exit($output);
 }
 else {
-    $sql = "SELECT * FROM Users WHERE username='".$uname."' AND pswd='".$pswd."';";
+    $sql = "SELECT * FROM Users WHERE username='".$uname."' AND password='".$pswd."';";
     $results = mysqli_query($connection, $sql);
     //and fetch requsults
 	if(mysqli_num_rows($results)) {
 		$row = mysqli_fetch_assoc($results);
 		$_SESSION["username"] = $row["username"];
-		if(isset($_SERVER['HTTP_REFERER'])) {
-			$ref = $_SERVER['HTTP_REFERER'];
-			echo "<a href='".$ref."'>Return to user entry</a>";
-		}
+		header("Location: index.php", TRUE, 301);
+		
+	} else {
+			$_SESSION['error'] =  "User name or password incorrect";
+			// if(isset($_SERVER['HTTP_REFERER'])) {
+			// 	$ref = $_SERVER['HTTP_REFERER'];
+			// 	echo "<a href='".$ref."'>Return to user entry</a>";
+			// }
+			header("Location: index.php", TRUE, 301);
+			//exit();
+			
 	}
 
     mysqli_free_result($results);

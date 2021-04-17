@@ -4,7 +4,6 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
 echo '<header>
   <nav id="banner" class="navbar navbar-expand-sm bg-dark navbar-dark" style="height: 144px;">
     <a class="navbar-brand" href="#" style="height: 144px;">
@@ -13,11 +12,11 @@ echo '<header>
 
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" href="login.php">Login</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Sign Up</a>
+        <a class="nav-link" href="signup.php">Sign Up</a>
       </li>
     </ul>
   </nav>

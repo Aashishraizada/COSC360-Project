@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php include "header.php"; ?>
 <?php
 
 $fname = NULL;
@@ -46,5 +47,5 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		<input type="submit" value="Create New User">
 	</form>
 </body>
-
+<?php include "footer.php"; ?>
 </html>

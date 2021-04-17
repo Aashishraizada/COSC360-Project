@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<?php include "header.php"; ?>
 <body>
 	<form method="post" action="checkUser.php" id="mainForm">
 		Username:<br>
@@ -12,5 +12,6 @@
 		<input type="submit" value="Log In">
 	</form>
 </body>
+<?php include "footer.php"; ?>
 
 </html>

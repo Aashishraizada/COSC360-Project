@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php include "header.php"; ?>
 <?php
 
 $fname = NULL;
@@ -65,4 +66,5 @@ else {
     mysqli_close($connection);
 }
 ?>
+<?php include "footer.php"; ?>
 </html>

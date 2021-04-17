@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <?php include "header1.php"; ?>
-<?php include "header2.php"; ?>
 <body>
+<?php include "header2.php"; ?>
 	<form method="post" action= "checkUser.php" id="loginForm">
 		
 	<?php 
@@ -12,6 +12,13 @@
 			$_SESSION['error'] = "";
 			echo "<br>";
 		}
+		
+		if(isset($_SESSION['message'])){
+			echo "<p>".$_SESSION['message']."</p>";
+			$_SESSION['message'] = "";
+			echo "<br>";
+		}	
+	
 	?>
 		Username:<br>
 		<input type="text" name="username" id="username" class="required">

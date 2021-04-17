@@ -1,3 +1,4 @@
+<?php include "sessionHeader.php"; ?>
 <!DOCTYPE html>
 <html>
 <?php
@@ -44,17 +45,14 @@ else {
 
     //and fetch requsults
 	if(mysqli_num_rows($results)) {
-		echo "<p>User already exists with this name and/or email.</p>";
-		if(isset($_SERVER['HTTP_REFERER'])) {
-			$ref = $_SERVER['HTTP_REFERER'];
-			$_SESSION["username"] = $row["username"];
-			header("Location: index.php", TRUE, 301);
-		}
+			$_SESSION['message']= "User already exists with this name and/or email.";
+			header("Location: signup.php", TRUE, 301);
 	}
 	else {
 		$sql_new = "INSERT INTO Users (firstname, lastname, username, email, password) VALUES ('".$fname."', '".$lname."', '".$uname."', '".$email."', '".md5($pswd)."')";
 		if(mysqli_query($connection, $sql_new)) {
-			echo "<p>An account for the user '".$fname."' has been created</p>";
+			$_SESSION['message']= "An account for the user '".$fname."' has been created. Sign in now!";
+			header("Location: login.php", TRUE, 301);
 		}
 		else {
 			$output = "<p>Unable to add data to the database.<br>Error: ".$sql_new."".mysqli_error($connection)."</p>";

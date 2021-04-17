@@ -1,3 +1,4 @@
+<?php include "sessionHeader.php"; ?>
 <!DOCTYPE html>
 <html>
 <?php include "header1.php"; ?>
@@ -26,6 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 ?>
 
 <body>
+	<?php
+		if(isset($_SESSION['message'])){
+			echo "<p>".$_SESSION['message']."</p>";
+			$_SESSION['message'] = "";
+			echo "<br>";
+		}	
+	?>
 	<form method="post" action="addUser.php" id="signUpForm">
 		First Name:<br>
 		<input type="text" name="firstname" value="<?php echo $fname; ?>" id="firstname" class="required">

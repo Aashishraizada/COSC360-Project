@@ -1,3 +1,4 @@
+<?php include "sessionHeader.php"; ?>
 <?php
 $key = NULL;
 $num = NULL;

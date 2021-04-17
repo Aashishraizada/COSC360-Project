@@ -5,7 +5,7 @@
 <body>
 <?php include "header2.php"; ?>
 	<form method="post" action= "checkUser.php" id="loginForm">
-		
+		<h1>Log in to your account!</h1>
 	<?php 
 		if( isset($_SESSION['error'])){
 			echo "<p>".$_SESSION['error']."</p>";

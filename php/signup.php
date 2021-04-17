@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		}	
 	?>
 	<form method="post" action="addUser.php" id="signUpForm">
+	<h1>Create an account!</h1>
 		First Name:<br>
 		<input type="text" name="firstname" value="<?php echo $fname; ?>" id="firstname" class="required">
 		<br>

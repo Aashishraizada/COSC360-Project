@@ -30,12 +30,12 @@ echo '<header>
       </ul>
       <form class="navbar-form navbar-right" action="scripts/search.php">
         <div class="form-group">
-          <input type="text" id = "search" class="form-control" placeholder="Search">
-          <select name = "dropdown" class="form-control">
-          <option value = "tag" selected>Tag</option>
-          <option value = "description">Description</option>
-          <option value = "userId">User ID</option>
-          <option value = "other">Other</option>
+          <input type="text" id="search" class="form-control" placeholder="Search">
+          <select id="category" name = "dropdown" class="form-control">
+          <option value = "2" selected>Tag</option>
+          <option value = "1">Description</option>
+          <option value = "3">Author</option>
+          <option value = "4">Other</option>
           </select>
         </div>
         <button type="submit" class="btn btn-default">Search</button>

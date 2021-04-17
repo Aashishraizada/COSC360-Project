@@ -19,7 +19,6 @@
 					$.post("search.php", {keyword: key, num: 5})
 					.done(function(data) {
 						$("#main-post").html(data);
-						$(".post").style.visibility="hidden";
 					});
 				}
 				else {

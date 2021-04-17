@@ -5,13 +5,11 @@
 
 if ($_SERVER['REQUEST_METHOD']=="POST"||$_SERVER['REQUEST_METHOD']=="post") {
     
-    if (isset($_POST['username'])&& isset($_POST['title']) && isset($_POST['content']) && isset($_POST['image'])) {
+    if (isset($_POST['username'])&& isset($_POST['postid']){
         
         $username = $_POST['username'];
-        $content = $_POST['content'];
-        $image = $_POST['image'];
-        $title = $_POST['title'];
-        $likes = 0;
+        $postId = $_POST['postId'];
+
         
         $host = "sql3.freesqldatabase.com";
         $database = "sql3404847";
@@ -39,9 +37,8 @@ if ($_SERVER['REQUEST_METHOD']=="POST"||$_SERVER['REQUEST_METHOD']=="post") {
             }
             //if user doesn't exist then insert into database
             if($found==true){
-                $sql = "INSERT INTO Post (title,content,username,date, likes,image) VALUES ('".$title."','".$content."', '".$username."', 'GETDATE()', '".$likes."', '".$image."')";
+                $sql = "Select * From Post Where postId = '".$postId."'";
                 if (mysqli_query($connection, $sql)){
-                    echo " ".$username." has made a post";
                     header("Location: http://localhost/COSC360-Project/php/index.php", TRUE, 301);
                     exit();
                 }else{

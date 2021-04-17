@@ -6,8 +6,6 @@
 <?php
 if (isset($_SESSION['username'])) {
   $uname = $_SESSION['username'];
-}else(!isset($_SESSION['username'])){
-    header("Location: login.php", TRUE, 301);
 }
 
 $host = "sql3.freesqldatabase.com";

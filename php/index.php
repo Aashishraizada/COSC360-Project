@@ -3,7 +3,10 @@
 
 <?php include "header1.php"; ?>
 
-</head>
+<script>
+
+  
+</script>
 
 <body>
   <?php include "header2.php"; ?>
@@ -30,39 +33,7 @@
             $results = mysqli_query($connection, $sql);
 
             //and fetch requsults
-            while ($row = mysqli_fetch_assoc($results)) {
-              echo '
-            <div id="posts" class="post post-thumb col-md-12">
-              <div class="post-header">
-                <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
-                <ul class="col-md-4 post-meta">
-                  <li><a href="author.html">' . $row['username'] . '</a></li>
-                  <li>' . $row['date'] . '</li>
-                </ul>
-              </div>
-              <div class="col-md-12">
-                <hr class="rounded post-divider">
-              </div>
-              <div class="post-body col-md-12">
-                <div class="col-md-7">
-                  <a class="post-img" href="blog-post.html" ><img src="../images/cat.jpg" alt="cat pic"></a>
-                </div>
-                <div class="col-md-5">
-                  <p>' . $row['content'] . '</p>
-                </div>
-              </div>
-              <div class="post-footer col-md-12">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Comments</a></li>
-                  <li><a href="#">Keyword 1</a></li>
-                  <li><a href="#">Keyword 2</a></li>
-                  <li><a href="#">views</a></li>
-                  <li><a href="#">Share</a></li>
-                </ul>
-              </div>
-            </div>';
-            }
+            
           }
 
           mysqli_free_result($results);

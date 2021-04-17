@@ -34,7 +34,7 @@ echo '<header>
       </ul>
       <form class="navbar-form navbar-right" action="scripts/search.php">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" id = "search" class="form-control" placeholder="Search">
           <select name = "dropdown" class="form-control">
           <option value = "tag" selected>Tag</option>
           <option value = "description">Description</option>

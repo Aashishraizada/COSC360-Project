@@ -3,17 +3,6 @@
 <html lang="en">
 <?php include "header1.php"; ?>
 
-<script>
-function checkPasswordMatch(e) {
-	if(document.getElementById("password").value != document.getElementById("password-check").value){
-		makeRed(document.getElementById("password"));
-		makeRed(document.getElementById("password-check"));
-		alert("The entered passwords do not match. Please try again.");
-		e.preventDefault();
-	}
-}
-</script>
-
 <body>
 <?php include "header2.php"; ?>
   <div id="main" class="section">
@@ -76,16 +65,6 @@ function checkPasswordMatch(e) {
 
   </div>
 
-	<footer>
-	<div id="footer" class="footer-bottom row">
-	  <div class="col-md-6">
-		<ul class="footer-nav">
-		  <li><a href="index.html">Home</a></li>
-		  <li><a href="about.html">About Us</a></li>
-		  <li><a href="contact.html">Contacts</a></li>
-		</ul>
-	  </div>
-	</div>
-	</footer>
+  <?php include "footer.php"; ?>
 </body>
 </html>

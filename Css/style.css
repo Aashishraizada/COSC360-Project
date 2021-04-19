@@ -64,6 +64,11 @@ hr.rounded {
     color: white;
 }
 
+ul.nobullets {
+    list-style-type: none;
+}
+
 a {
     color: black;
 }
+

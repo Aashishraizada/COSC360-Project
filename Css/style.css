@@ -71,4 +71,6 @@ ul.nobullets {
 a {
     color: black;
 }
-
+a:hover {
+    cursor: pointer;
+}

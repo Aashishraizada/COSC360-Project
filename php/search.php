@@ -50,7 +50,7 @@ if (!is_null($key) && !empty($key)) {
               </div>
               <div class="post-body col-md-12">
                 <div class="col-md-7">
-                  <a class="post-img" href="blog-post.html" ><img src="../images/cat.jpg" alt="cat pic"></a>
+                  <a class="post-img" href="blog-post.html" ><img src="'.$row['postImage'].'" alt="cat pic"></a>
                 </div>
                 <div class="col-md-5">
                   <p>' . $row['content'] . '</p>
@@ -86,7 +86,7 @@ if (!is_null($key) && !empty($key)) {
               </div>
               <div class="post-body col-md-12">
                 <div class="col-md-7">
-                  <a class="post-img" href="blog-post.html" ><img src="../images/cat.jpg" alt="cat pic"></a>
+                  <a class="post-img" href="blog-post.html" ><img src="'.$row['postImage'].'" alt="cat pic"></a>
                 </div>
                 <div class="col-md-5">
                   <p>' . $row['content'] . '</p>
@@ -122,7 +122,7 @@ if (!is_null($key) && !empty($key)) {
               </div>
               <div class="post-body col-md-12">
                 <div class="col-md-7">
-                  <a class="post-img" href="blog-post.html" ><img src="../images/cat.jpg" alt="cat pic"></a>
+                  <a class="post-img" href="blog-post.html" ><img src="'.$row['postImage'].'" alt="cat pic"></a>
                 </div>
                 <div class="col-md-5">
                   <p>' . $row['content'] . '</p>
@@ -158,7 +158,7 @@ if (!is_null($key) && !empty($key)) {
               </div>
               <div class="post-body col-md-12">
                 <div class="col-md-7">
-                  <a class="post-img" href="blog-post.html" ><img src="../images/cat.jpg" alt="cat pic"></a>
+                  <a class="post-img" href="blog-post.html" ><img src="'.$row['postImage'].'" alt="cat pic"></a>
                 </div>
                 <div class="col-md-5">
                   <p>' . $row['content'] . '</p>
@@ -194,7 +194,7 @@ if (!is_null($key) && !empty($key)) {
               </div>
               <div class="post-body col-md-12">
                 <div class="col-md-7">
-                  <a class="post-img" href="blog-post.html" ><img src="../images/cat.jpg" alt="cat pic"></a>
+                  <a class="post-img" href="blog-post.html" ><img src="'.$row['postImage'].'" alt="cat pic"></a>
                 </div>
                 <div class="col-md-5">
                   <p>' . $row['content'] . '</p>
@@ -227,7 +227,7 @@ if (!is_null($key) && !empty($key)) {
               </div>
               <div class="post-body col-md-12">
                 <div class="col-md-7">
-                  <a class="post-img" href="blog-post.html" ><img src="../images/cat.jpg" alt="cat pic"></a>
+                  <a class="post-img" href="blog-post.html" ><img src="'.$row['postImage'].'" alt="cat pic"></a>
                 </div>
                 <div class="col-md-5">
                   <p>' . $row['content'] . '</p>

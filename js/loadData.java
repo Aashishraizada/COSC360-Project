@@ -18,8 +18,8 @@ public class LoadData
 	{		
 		// TODO: Change for your database/user information
 		String url = "mysql.aasrai.dreamhosters.com";
-		String uid = "aashishraizada";
-		String pw = "2JieMXh2k6jQENg";
+		String uid = "cosc360";
+		String pw = "adminpassword";
 		
 		System.out.println("Connecting to database.");
 

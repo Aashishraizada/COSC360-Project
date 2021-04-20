@@ -18,13 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $num = $_GET["num"];
     }
 }
-$temp = "username=";
+$temp = "userId=";
 if (!is_null($key) && !empty($key)) {
 
-	$host = "sql3.freesqldatabase.com";
-	$database = "sql3404847";
-	$user = "sql3404847";
-	$password = "TuyFjKXzrh";
+	$host = "mysql.aasrai.dreamhosters.com";
+	$database = "myblogsite";
+	$user = "cosc360";
+	$password = "adminpassword";
 
     $connection = new mysqli($host, $user, $password, $database);
 
@@ -39,10 +39,10 @@ if (!is_null($key) && !empty($key)) {
             while ($row = mysqli_fetch_assoc($results)) {
                 echo '<div id="posts" class="post post-thumb col-md-12">
               <div class="post-header">
-                <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
+                <h3 class="col-md-8 post-postTitle postTitle-lg"><a href="blog-post.html">' . $row["postTitle"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                <li><a href="author.php?'.$temp.'"'.$row['username'].'">' .$row['username']. '</a></li>
-                  <li>' . $row['date'] . '</li>
+                <li><a href="author.php?'.$temp.'"'.$row['userId'].'">' .$row['userId']. '</a></li>
+                  <li>' . $row['postDate'] . '</li>
                 </ul>
               </div>
               <div class="col-md-12">
@@ -75,10 +75,10 @@ if (!is_null($key) && !empty($key)) {
             while ($row = mysqli_fetch_assoc($results)) {
                 echo '<div id="posts" class="post post-thumb col-md-12">
               <div class="post-header">
-                <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
+                <h3 class="col-md-8 post-postTitle postTitle-lg"><a href="blog-post.html">' . $row["postTitle"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                <li><a href="author.php?'.$temp.'"'.$row['username'].'">' .$row['username']. '</a></li>
-                  <li>' . $row['date'] . '</li>
+                <li><a href="author.php?'.$temp.'"'.$row['userId'].'">' .$row['userId']. '</a></li>
+                  <li>' . $row['postDate'] . '</li>
                 </ul>
               </div>
               <div class="col-md-12">
@@ -105,16 +105,16 @@ if (!is_null($key) && !empty($key)) {
 				$num = 6;
 			}
         } else if ($num == 3) { //posts based on user id
-            $sql = "SELECT * FROM Post WHERE username LIKE '%".$key."%'";
+            $sql = "SELECT * FROM Post WHERE userId LIKE '%".$key."%'";
 
             $results = mysqli_query($connection, $sql);
             while ($row = mysqli_fetch_assoc($results)) {
                 echo '<div id="posts" class="post post-thumb col-md-12">
               <div class="post-header">
-                <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
+                <h3 class="col-md-8 post-postTitle postTitle-lg"><a href="blog-post.html">' . $row["postTitle"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                <li><a href="author.php?'.$temp.'"'.$row['username'].'">' .$row['username']. '</a></li>
-                  <li>' . $row['date'] . '</li>
+                <li><a href="author.php?'.$temp.'"'.$row['userId'].'">' .$row['userId']. '</a></li>
+                  <li>' . $row['postDate'] . '</li>
                 </ul>
               </div>
               <div class="col-md-12">
@@ -147,10 +147,10 @@ if (!is_null($key) && !empty($key)) {
             while ($row = mysqli_fetch_assoc($results)) {
                 echo '<div id="posts" class="post post-thumb col-md-12">
               <div class="post-header">
-                <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
+                <h3 class="col-md-8 post-postTitle postTitle-lg"><a href="blog-post.html">' . $row["postTitle"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                <li><a href="author.php?'.$temp.'"'.$row['username'].'">' .$row['username']. '</a></li>
-                  <li>' . $row['date'] . '</li>
+                <li><a href="author.php?'.$temp.'"'.$row['userId'].'">' .$row['userId']. '</a></li>
+                  <li>' . $row['postDate'] . '</li>
                 </ul>
               </div>
               <div class="col-md-12">
@@ -183,10 +183,10 @@ if (!is_null($key) && !empty($key)) {
             while ($row = mysqli_fetch_assoc($results)) {
                 echo '<div id="posts" class="post post-thumb col-md-12" style="visibility:hidden">
               <div class="post-header">
-                <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
+                <h3 class="col-md-8 post-postTitle postTitle-lg"><a href="blog-post.html">' . $row["postTitle"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                  <li><a href="author.html">' . $row['username'] . '</a></li>
-                  <li>' . $row['date'] . '</li>
+                  <li><a href="author.html">' . $row['userId'] . '</a></li>
+                  <li>' . $row['postDate'] . '</li>
                 </ul>
               </div>
               <div class="col-md-12">
@@ -216,10 +216,10 @@ if (!is_null($key) && !empty($key)) {
             while ($row = mysqli_fetch_assoc($results)) {
                 echo '<div id="posts" class="post post-thumb col-md-12" style="visibility:hidden">
               <div class="post-header">
-                <h3 class="col-md-8 post-title title-lg"><a href="blog-post.html">' . $row["title"] . '</a></h3>
+                <h3 class="col-md-8 post-postTitle postTitle-lg"><a href="blog-post.html">' . $row["postTitle"] . '</a></h3>
                 <ul class="col-md-4 post-meta">
-                  <li><a href="author.html">' . $row['username'] . '</a></li>
-                  <li>' . $row['date'] . '</li>
+                  <li><a href="author.html">' . $row['userId'] . '</a></li>
+                  <li>' . $row['postDate'] . '</li>
                 </ul>
               </div>
               <div class="col-md-12">

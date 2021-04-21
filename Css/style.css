@@ -22,6 +22,7 @@
     background-color:#61777e;
     color:white;
 }
+
 #navBar{
     background-color:#61777e;
 }
@@ -41,6 +42,9 @@ img {
     max-width: 100%;
     max-height: 100%;
   }
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
 .post-footer{
     background-color: #61777e;
     margin: 0 !important;
@@ -74,3 +78,5 @@ a {
 a:hover {
     cursor: pointer;
 }
+
+

@@ -37,7 +37,7 @@ if (!is_null($key) && !empty($key)) {
             $sql = "SELECT * FROM Post JOIN `User` ON Post.userId = `User`.userId WHERE content LIKE '%".$key."%'";
         } 
         else if ($num == 2) { //posts based on keywords
-            $sql = "SELECT * FROM Post JOIN Related ON Post.postId = Related.postId JOIN Tag ON Related.tagId = Tag.tagId WHERE tagName LIKE '%".$key."%'";
+            $sql = "SELECT * FROM Post JOIN Related ON Post.postId = Related.postId JOIN Tag ON Related.tagId = Tag.tagId JOIN `User` ON Post.userId = `User`.userId WHERE tagName LIKE '%".$key."%'";
         }
         else if ($num == 3) { //posts based on user id
             $sql = "SELECT * FROM Post JOIN `User` ON Post.userId = `User`.userId WHERE userName LIKE '%".$key."%'";

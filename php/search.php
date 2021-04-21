@@ -68,9 +68,9 @@ if (!is_null($key) && !empty($key)) {
               </div>
               <div class="post-footer col-md-12">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Keyword 1</a></li>
-                  <li><a href="#">Keyword 2</a></li>
+                  <li class="active"><a href="#">Lifestyle</a></li>
+                  <li><a href="#">Food</a></li>
+                  <li><a href="#">Music</a></li>
                 </ul>
               </div>
             </div>';

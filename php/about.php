@@ -11,21 +11,14 @@
         <div class="container">
 
             <div class="row hot-post">
-                <div id="main-post" class="col-md-8 hot-post-left">
-                    <div id="posts" class="post post-thumb col-md-12">
+            <center><div id="main-post">
+                    <div id="posts">
                         <div class="col-md-12">
-                            <h1>About</h1>
+                            <h1 style="text-align: center">About</h1>
                             <hr class="rounded post-divider">
                         </div>
                         <div class="post-body col-md-12">
-                          <!-- <?php
-                            // if (isset($_SESSION['success'])) {
-                            //     echo "<p>" . $_SESSION['success'] . "</p>";
-                            //     $_SESSION['success'] = "";
-                            //     echo "<br>";
-                            // }
-                            ?> -->
-                            <p>
+                            <p  style="text-align: justify">
                             Our MyBlogPost website aims to create a platform where registered users are able to participate in online discussions 
                             using personalized blog posts. Our features include secure login, user control feature, search features. We also include
                              limited features for unregistered users including viewing posts and viewing comments. The goal is for the product to be 
@@ -33,12 +26,12 @@
                              With functionality including registration, posting, commenting, viewing blogs and liking posts. The site allows users to
                               log in and stay logged in until they leave our site.  
                             </p>
-                            <p>Thanks for stoping by</p>
+                            <p>Thanks for stoping by!</p>
                             </form>
 
                         </div>
                     </div>
-                </div>
+                </div></center>
 
             </div>
 
@@ -46,7 +39,7 @@
 
     </div>
 
-    <?php include "footer.php"; ?>
+    <?php echo "<br>"; include "footer.php"; ?>
 </body>
 
 </html>

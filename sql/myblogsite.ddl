@@ -134,7 +134,7 @@ INSERT INTO Related (tagId, postId) VALUES (1, 9);
 INSERT INTO Related (tagId, postId) VALUES (2, 9);
 INSERT INTO Related (tagId, postId) VALUES (3, 9);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Element selections', '2020-10-15 10:29:55', 59, 4, "../images/posts/10.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Read More about Element selections', '2020-10-15 10:29:55', 59, 4, "../images/posts/10.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 10);
 INSERT INTO Related (tagId, postId) VALUES (6, 10);
 INSERT INTO Related (tagId, postId) VALUES (7, 10);
@@ -184,7 +184,7 @@ INSERT INTO Related (tagId, postId) VALUES (6, 19);
 INSERT INTO Related (tagId, postId) VALUES (1, 19);
 INSERT INTO Related (tagId, postId) VALUES (7, 19);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Heading changes', '2020-10-15 17:28:14', 67, 4, "../images/posts/20.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Read more about CSS styling for Heading changes!', '2020-10-15 17:28:14', 67, 4, "../images/posts/20.jpg");
 INSERT INTO Related (tagId, postId) VALUES (1, 20);
 INSERT INTO Related (tagId, postId) VALUES (6, 20);
 INSERT INTO Related (tagId, postId) VALUES (2, 20);

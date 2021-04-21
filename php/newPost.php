@@ -1,5 +1,5 @@
 <?php if (session_status() === PHP_SESSION_NONE) {
-  session_start();
+    session_start();
 }
 ?>
 <?php include "sessionHeader.php"; ?>
@@ -9,10 +9,10 @@
 <?php include "header2.php"; ?>
 
 <?php
-    if(!isset($_SESSION['username'])){
-        $_SESSION['error'] ="Please log in";
-        header("Location: login.php", TRUE, 301);
-    }
+if (!isset($_SESSION['username'])) {
+    $_SESSION['error'] = "Please log in";
+    header("Location: login.php", TRUE, 301);
+}
 ?>
 
 
@@ -28,10 +28,10 @@
                             <hr class="rounded post-divider">
                         </div>
                         <div class="post-body col-md-12">
-                            <?php 
-                            if(isset($_SESSION['success'])){
+                            <?php
+                            if (isset($_SESSION['success'])) {
                                 echo $_SESSION['success'];
-                                $_SESSION['success']="";
+                                $_SESSION['success'] = "";
                             }
                             ?>
                             <form method="post" action="../php/submitPost.php" id="mainForm">
@@ -43,8 +43,19 @@
                                 <br>
                                 Image:<br>
                                 <input type="text" name="image" id="image" class="required">
-                                <br>
                                 <br><br>
+                                Tag:<br>
+                                <select id="tag" name="tag">
+                                    <option value="1">lifestyle</option>
+                                    <option value="2">food</option>
+                                    <option value="3">music</option>
+                                    <option value="4">news</option>
+                                    <option value="5">politics</option>
+                                    <option value="6">covid</option>
+                                    <option value="7">animals</option>
+                                </select>
+                                <br>
+                                <br>
                                 <input type="submit" value="Post">
                             </form>
 

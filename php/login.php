@@ -35,7 +35,7 @@
 								<br>
 								Password:<br>
 								<input type="password" name="password" id="password" class="required">
-								<br>
+								<br><br>
 								<input type="submit" value="Log In">
 							</form>
 						</div>

@@ -41,23 +41,7 @@
           </div>
         </div>
 
-		<div class="col-md-4 hot-post-right" id="login" style="display:none">
-			<div class="sidepost-header">
-				<h3 >Login</h3>
-				<hr class="rounded">
-			</div>
-			<center>Don't have an account? <a id="goToSignup">Signup</a></center><br><br>
-			<form method="post" action="../php/newuser.php" id="mainForm" >
-				<label class="col-md-5">Username: </label>
-				<input type="text" name="username" id="username" class="required">
-				<br><br>
-				<label class="col-md-5">Password: </label>
-				<input type="password" name="password" id="password" class="required">
-				<br><br><br>
-				<center><input type="submit" value="Login" style="border:none"></center>
-				<br><br>
-			</form>
-		</div>
+		
 
       </div>
 

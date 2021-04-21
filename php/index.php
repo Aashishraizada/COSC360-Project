@@ -7,7 +7,7 @@
 <script type="text/javascript" src="../js/search.js"></script>
 <body>
 
-  <?php include "header2.php"; ?>
+  <?php include "headerIndex.php"; ?>
   <div id="main" class="section">
 
     <div class="container">

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
+<?php include "header1.php"; ?>
+<?php include "header2.php"; ?>
 <?php
+
+echo "<br>";
 
 $fname = NULL;
 $lname = NULL;
@@ -36,16 +40,17 @@ if($error != null) {
 	exit($output);
 }
 else {
-    $sql = "INSERT INTO ContactUs VALUES ('".$fname."', '".$lname."', '".$email."', '".$msg."');";
+    $sql = "INSERT INTO ContactUs(firstName, lastName, email, message) VALUES ('".$fname."', '".$lname."', '".$email."', '".$msg."');";
     $results = mysqli_query($connection, $sql);
 
     //and fetch requsults
 	if($results) {
-		echo "<p>Thank you for contacting us. We will get in touch with you shortly.</p>";
+		echo "<center><p>Thank you for contacting us. We will get in touch with you shortly.</p></center>";
 	}
     //mysqli_free_result($results);
     mysqli_close($connection);
 }
+echo "<br><br>";
 ?>
 <?php include "footer.php"; ?>
 </html>

@@ -38,6 +38,18 @@ echo '<header>
         <li><a href="profile.php">My Account</a></li>
         <li><a href="contact.php">Contact Us</a></li>
       </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" id="search" class="form-control" placeholder="Search">
+          <select id="category" name = "dropdown" class="form-control">
+          <option value = "2">Tag</option>
+          <option value = "1" selected>Description</option>
+          <option value = "3">Author</option>
+          <option value = "4">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
     </div>
   </nav>
 </header>';

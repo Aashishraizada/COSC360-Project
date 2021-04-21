@@ -52,7 +52,7 @@ else {
 		//encrypt password before insertion
 		$encryptedpswd = md5($pswd);
 
-		$sql_new = "INSERT INTO Users (firstname, lastname, username, email, password) VALUES ('".$fname."', '".$lname."', '".$uname."', '".$email."', '".md5($encryptedpswd)."')";
+		$sql_new = "INSERT INTO User (firstname, lastname, username, email, password) VALUES ('".$fname."', '".$lname."', '".$uname."', '".$email."', '".md5($encryptedpswd)."')";
 		if(mysqli_query($connection, $sql_new)) {
 			$_SESSION['message']= "An account for the user '".$fname."' has been created. Sign in now!";
 			header("Location: login.php", TRUE, 301);

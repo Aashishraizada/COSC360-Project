@@ -22,7 +22,7 @@ if ($error != null) {
   $output = "<p>Unable to connect to database!</p>";
   exit($output);
 } else {
-  $sql = "SELECT * FROM Users WHERE username = '" . $uname . "'";
+  $sql = "SELECT * FROM User WHERE username = '" . $uname . "'";
   $results = mysqli_query($connection, $sql);
   while ($row = mysqli_fetch_assoc($results)) {
     $fname = $row['firstName'];

@@ -37,7 +37,7 @@ if($error != null) {
 else {
 	//encrypt submitted password for comparison
 	$encryptedpswd = md5($pswd);
-    $sql = "SELECT * FROM Users WHERE username='".$uname."' AND password='".$encryptedpswd."';";
+    $sql = "SELECT * FROM User WHERE username='".$uname."' AND password='".$encryptedpswd."';";
     $results = mysqli_query($connection, $sql);
     //and fetch requsults
 	if(mysqli_num_rows($results)) {

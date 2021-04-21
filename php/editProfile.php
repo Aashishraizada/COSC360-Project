@@ -37,12 +37,12 @@ if ($error != null) {
 } else {
     //encrypt submitted password for comparison
     $encryptedpswd = md5($pswd);
-    $sql = "SELECT * FROM Users WHERE username='" . $uname . "' AND password='" . $encryptedpswd . "';";
+    $sql = "SELECT * FROM User WHERE username='" . $uname . "' AND password='" . $encryptedpswd . "';";
     $results = mysqli_query($connection, $sql);
     //and fetch requsults
     if (mysqli_num_rows($results)) {// if user and password matches
         $row = mysqli_fetch_assoc($results);
-        $sql = "UPDATE Users SET username='" . $uname . "', firstName='" . $fname . "', email='" . $email . "', password='" . $encryptedpswd . "', image='" . $image . "' WHERE username='" . $uname . "'";
+        $sql = "UPDATE User SET username='" . $uname . "', firstName='" . $fname . "', email='" . $email . "', password='" . $encryptedpswd . "', image='" . $image . "' WHERE username='" . $uname . "'";
         if (mysqli_query($connection, $sql)) {
             $_SESSION['error'] =  "Your account has been updated";
             header("Location: profile.php", TRUE, 301);

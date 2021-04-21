@@ -22,4 +22,5 @@ $(document).ready(function(){
   showPosts();
   $("#search").keyup(showPosts);
   $("#searchForm").onclick(showPosts);
+
 });

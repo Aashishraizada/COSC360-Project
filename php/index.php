@@ -5,6 +5,13 @@
 <?php include "header1.php"; ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="../js/search.js"></script>
+<script>
+setInterval(function(){ 
+    $.post("tracker.php", {num: 1}).done(function(data) {
+          $("#side-posts").html(data);
+    }); 
+  }, 1000);
+</script> 
 <body>
 
   <?php include "headerIndex.php"; ?>
@@ -16,6 +23,7 @@
         <div id="main-post" class="col-md-8 hot-post-left">
           
         </div>
+
         <?php 
         if (!isset($_SESSION['username'])) {
           echo '<div class="col-md-4 hot-post-right" id="signup">
@@ -58,10 +66,27 @@
         </div>';
         }
         ?>
-        
 
-        <div class="col-md-4 hot-post-right">
+        <div class="col-md-4 hot-post-right" id="login" style="display:none">
           <div class="sidepost-header">
+            <h3>Login</h3>
+            <hr class="rounded">
+          </div>
+          <center>Don't have an account? <a id="goToSignup">Signup</a></center><br><br>
+          <form method="post" action="../php/newuser.php" id="signUpForm">
+            <label class="col-md-5">Username: </label>
+            <input type="text" name="username" id="username" class="required">
+            <br><br>
+            <label class="col-md-5">Password: </label>
+            <input type="password" name="password" id="password" class="required">
+            <br><br><br>
+            <center><input type="submit" value="Login" style="border:none"></center>
+            <br><br>
+          </form>
+        </div>
+
+        <div class="col-md-4 hot-post-right" id="side-posts">
+          <!-- <div class="sidepost-header">
             <h3>Popular Posts</h3>
             <hr class="rounded">
           </div>
@@ -69,7 +94,7 @@
 
           <div id="side-post" class="post post-thumb">
             <div class="col-md-4">
-              <a class="img-thumbnail" href="index.html"><img src="../Css/style.css" alt="Cat pic"></a>
+              <a class="img-thumbnail" href="index.html"><img src="../images/cat.jpg" alt="Cat pic"></a>
             </div>
             <div class="post-body">
               <h3 class="post-title"><a href="index.html">Side post 1</a></h3>
@@ -96,7 +121,7 @@
               </ul>
             </div>
           </div>
-          <hr class="solid">
+          <hr class="solid"> -->
         </div>
 
         <div class="col-md-4 hot-post-right">

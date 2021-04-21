@@ -73,7 +73,6 @@ CREATE TABLE ContactUs (
 );
 
 
-INSERT INTO `User` (firstName, lastName, email, phoneNum, address, city, state, postalCode, country, userName, password, isAdmin, enabled) VALUES ('Bobby', 'Brown', 'bobby.brown@hotmail.ca', '572-342-8911', '222 Bush Avenue', 'Boston', 'MA', '22222', 'United States', 'bobby' , 'a9c4cef5735770e657b7c25b9dcb807b', 'yes', 'yes');
 INSERT INTO `User` (firstName, lastName, email, phoneNum, address, city, state, postalCode, country, username, password, isAdmin, enabled) VALUES ('Arnold', 'Anderson', 'a.anderson@gmail.com', '204-111-2222', '103 AnyWhere Street', 'Winnipeg', 'MB', 'R3X 45T', 'Canada', 'arnold' , '098f6bcd4621d373cade4e832627b4f6', 'no', 'yes');
 INSERT INTO `User` (firstName, lastName, email, phoneNum, address, city, state, postalCode, country, username, password, isAdmin, enabled) VALUES ('Bobby', 'Brown', 'bobby.brown@hotmail.ca', '572-342-8911', '222 Bush Avenue', 'Boston', 'MA', '22222', 'United States', 'bobby' , 'a9c4cef5735770e657b7c25b9dcb807b', 'yes', 'yes');
 INSERT INTO `User` (firstName, lastName, email, phoneNum, address, city, state, postalCode, country, username, password, isAdmin, enabled) VALUES ('Candace', 'Cole', 'cole@charity.org', '333-444-5555', '333 Central Crescent', 'Chicago', 'IL', '33333', 'United States', 'candace' , '098f6bcd4621d373cade4e832627b4f6', 'no', 'yes');

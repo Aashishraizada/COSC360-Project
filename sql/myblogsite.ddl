@@ -89,102 +89,102 @@ INSERT INTO Tag (tagId, tagName) VALUES (6, "covid");
 INSERT INTO Tag (tagId, tagName) VALUES (7, "animals");
 
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 10:25:55', 5, 1, "../images/posts/1.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Power of videos', '2020-10-15 10:25:55', 5, 1, "../images/posts/1.jpg");
 INSERT INTO Related (tagId, postId) VALUES (1, 1);
 INSERT INTO Related (tagId, postId) VALUES (2, 1);
 INSERT INTO Related (tagId, postId) VALUES (3, 1);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-16 18:00:00', 25, 1, "../images/posts/2.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Professionality', '2020-10-16 18:00:00', 25, 1, "../images/posts/2.jpg");
 INSERT INTO Related (tagId, postId) VALUES (1, 2);
 INSERT INTO Related (tagId, postId) VALUES (4, 2);
 INSERT INTO Related (tagId, postId) VALUES (5, 2);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 3:30:22', 47, 1, "../images/posts/3.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Themes and styles', '2020-10-15 3:30:22', 47, 1, "../images/posts/3.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 3);
 INSERT INTO Related (tagId, postId) VALUES (6, 3);
 INSERT INTO Related (tagId, postId) VALUES (7, 3);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-17 05:45:11', 35, 3, "../images/posts/4.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('New buttons', '2020-10-17 05:45:11', 35, 3, "../images/posts/4.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 4);
 INSERT INTO Related (tagId, postId) VALUES (2, 4);
 INSERT INTO Related (tagId, postId) VALUES (7, 4);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 10:25:55', 48, 3, "../images/posts/5.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Easy reading', '2020-10-15 10:25:55', 48, 3, "../images/posts/5.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 5);
 INSERT INTO Related (tagId, postId) VALUES (6, 5);
 INSERT INTO Related (tagId, postId) VALUES (7, 5);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 10:25:55', 26, 3, "../images/posts/6.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Quick brown fox', '2020-10-15 10:25:55', 26, 3, "../images/posts/6.jpg");
 INSERT INTO Related (tagId, postId) VALUES (1, 6);
 INSERT INTO Related (tagId, postId) VALUES (2, 6);
 INSERT INTO Related (tagId, postId) VALUES (3, 6);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-16 18:00:00', 53, 5, "../images/posts/7.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Heading styles', '2020-10-16 18:00:00', 53, 5, "../images/posts/7.jpg");
 INSERT INTO Related (tagId, postId) VALUES (1, 7);
 INSERT INTO Related (tagId, postId) VALUES (4, 7);
 INSERT INTO Related (tagId, postId) VALUES (5, 7);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 3:30:22', 7, 5, "../images/posts/8.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Stop reading before the end', '2020-10-15 3:30:22', 7, 5, "../images/posts/8.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 8);
 INSERT INTO Related (tagId, postId) VALUES (2, 8);
 INSERT INTO Related (tagId, postId) VALUES (7, 8);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-17 05:45:11', 19, 5, "../images/posts/9.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Keyword searches', '2020-10-17 05:45:11', 19, 5, "../images/posts/9.jpg");
 INSERT INTO Related (tagId, postId) VALUES (1, 9);
 INSERT INTO Related (tagId, postId) VALUES (2, 9);
 INSERT INTO Related (tagId, postId) VALUES (3, 9);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 10:29:55', 59, 4, "../images/posts/10.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Element selections', '2020-10-15 10:29:55', 59, 4, "../images/posts/10.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 10);
 INSERT INTO Related (tagId, postId) VALUES (6, 10);
 INSERT INTO Related (tagId, postId) VALUES (7, 10);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 11:25:55', 7, 1, "../images/posts/11.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Lorem ipsum', '2020-10-15 11:25:55', 7, 1, "../images/posts/11.jpg");
 INSERT INTO Related (tagId, postId) VALUES (1, 11);
 INSERT INTO Related (tagId, postId) VALUES (4, 11);
 INSERT INTO Related (tagId, postId) VALUES (5, 11);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-16 18:56:20', 35, 1, "../images/posts/12.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Pellentesque', '2020-10-16 18:56:20', 35, 1, "../images/posts/12.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 12);
 INSERT INTO Related (tagId, postId) VALUES (2, 12);
 INSERT INTO Related (tagId, postId) VALUES (7, 12);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 9:31:22', 27, 1, "../images/posts/13.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Suspendisse', '2020-10-15 9:31:22', 27, 1, "../images/posts/13.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 13);
 INSERT INTO Related (tagId, postId) VALUES (1, 13);
 INSERT INTO Related (tagId, postId) VALUES (5, 13);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-17 15:45:18', 45, 3, "../images/posts/14.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Nunc viverra', '2020-10-17 15:45:18', 45, 3, "../images/posts/14.jpg");
 INSERT INTO Related (tagId, postId) VALUES (5, 14);
 INSERT INTO Related (tagId, postId) VALUES (2, 14);
 INSERT INTO Related (tagId, postId) VALUES (7, 14);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 13:45:25', 38, 3, "../images/posts/15.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Donec laoreet', '2020-10-15 13:45:25', 38, 3, "../images/posts/15.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 15);
 INSERT INTO Related (tagId, postId) VALUES (1, 15);
 INSERT INTO Related (tagId, postId) VALUES (6, 15);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-16 18:45:51', 27, 3, "../images/posts/16.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Laoreet nonummy', '2020-10-16 18:45:51', 27, 3, "../images/posts/16.jpg");
 INSERT INTO Related (tagId, postId) VALUES (6, 16);
 INSERT INTO Related (tagId, postId) VALUES (1, 16);
 INSERT INTO Related (tagId, postId) VALUES (5, 16);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-16 12:26:48', 43, 5, "../images/posts/17.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Mauris eget neque', '2020-10-16 12:26:48', 43, 5, "../images/posts/17.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 17);
 INSERT INTO Related (tagId, postId) VALUES (6, 17);
 INSERT INTO Related (tagId, postId) VALUES (5, 17);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 8:33:21', 9, 5, "../images/posts/18.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Save time in Word', '2020-10-15 8:33:21', 9, 5, "../images/posts/18.jpg");
 INSERT INTO Related (tagId, postId) VALUES (4, 18);
 INSERT INTO Related (tagId, postId) VALUES (7, 18);
 INSERT INTO Related (tagId, postId) VALUES (5, 18);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-17 11:25:13', 27, 5, "../images/posts/19.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Lazy dog', '2020-10-17 11:25:13', 27, 5, "../images/posts/19.jpg");
 INSERT INTO Related (tagId, postId) VALUES (6, 19);
 INSERT INTO Related (tagId, postId) VALUES (1, 19);
 INSERT INTO Related (tagId, postId) VALUES (7, 19);
 
-INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Chai', '2020-10-15 17:28:14', 67, 4, "../images/posts/20.jpg");
+INSERT INTO Post(postTitle, postDate, likeCount, userId, postImage) VALUES ('Heading changes', '2020-10-15 17:28:14', 67, 4, "../images/posts/20.jpg");
 INSERT INTO Related (tagId, postId) VALUES (1, 20);
 INSERT INTO Related (tagId, postId) VALUES (6, 20);
 INSERT INTO Related (tagId, postId) VALUES (2, 20);

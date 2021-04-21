@@ -40,7 +40,7 @@ if($error != null) {
 	exit($output);
 }
 else {
-    $sql = "SELECT * FROM Users WHERE username='".$uname."' OR email='".$email."';";
+    $sql = "SELECT * FROM User WHERE username='".$uname."' OR email='".$email."';";
     $results = mysqli_query($connection, $sql);
 
     //and fetch requsults

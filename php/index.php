@@ -16,8 +16,9 @@
         <div id="main-post" class="col-md-8 hot-post-left">
           
         </div>
-
-        <div class="col-md-4 hot-post-right" id="signup">
+        <?php 
+        if (!isset($_SESSION['username'])) {
+          echo '<div class="col-md-4 hot-post-right" id="signup">
           <div class="sidepost-header">
             <h3>Signup</h3>
             <hr class="rounded">
@@ -43,8 +44,8 @@
             <h3>Login</h3>
             <hr class="rounded">
           </div>
-          <center>Don't have an account? <a id="goToSignup">Signup</a></center><br><br>
-          <form method="post" action="../php/newuser.php" id="signUpForm">
+          <center>Don\'t have an account? <a id="goToSignup">Signup</a></center><br><br>
+          <form method="post" action="../php/checkUser.php" id="signUpForm">
             <label class="col-md-5">Username: </label>
             <input type="text" name="username" id="username" class="required">
             <br><br>
@@ -54,7 +55,10 @@
             <center><input type="submit" value="Login" style="border:none"></center>
             <br><br>
           </form>
-        </div>
+        </div>';
+        }
+        ?>
+        
 
         <div class="col-md-4 hot-post-right">
           <div class="sidepost-header">

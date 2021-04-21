@@ -6,9 +6,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="../js/search.js"></script>
 <script>
-setInterval(function(){ 
+  setInterval(function(){ 
     $.post("tracker.php", {num: 1}).done(function(data) {
           $("#side-posts").html(data);
+    }); 
+  }, 1000);
+  setInterval(function(){ 
+    $.post("tagTracker.php", {num: 1}).done(function(data) {
+          $("#popular-tags").html(data);
     }); 
   }, 1000);
 </script> 
@@ -86,46 +91,10 @@ setInterval(function(){
         </div>
 
         <div class="col-md-4 hot-post-right" id="side-posts">
-          <!-- <div class="sidepost-header">
-            <h3>Popular Posts</h3>
-            <hr class="rounded">
-          </div>
-
-
-          <div id="side-post" class="post post-thumb">
-            <div class="col-md-4">
-              <a class="img-thumbnail" href="index.html"><img src="../images/cat.jpg" alt="Cat pic"></a>
-            </div>
-            <div class="post-body">
-              <h3 class="post-title"><a href="index.html">Side post 1</a></h3>
-              <ul class="post-meta">
-                <li><a href="index.html">John Doe</a></li>
-                <div class="post-category">
-                  <a href="category.html"><i class="fa fa-caret-square-o-down" aria-hidden="true"></i></a>
-                </div>
-                <li>20 April 2018</li>
-              </ul>
-            </div>
-            <hr class="solid">
-          </div>
-
-          <div id="side-post" class="post post-thumb">
-            <div class="col-md-4">
-              <a class="img-thumbnail" href="index.html"><img src="../images/cat.jpg" alt="Cat pic"></a>
-            </div>
-            <div class="post-body">
-              <h3 class="post-title"><a href="index.html">Side Post 2</a></h3>
-              <ul class="post-meta">
-                <li><a href="index.html">John Doe</a></li>
-                <li>20 April 2018</li>
-              </ul>
-            </div>
-          </div>
-          <hr class="solid"> -->
         </div>
 
-        <div class="col-md-4 hot-post-right">
-          <div class="sidepost-header">
+        <div class="col-md-4 hot-post-right" id="popular-tags">
+          <!-- <div class="sidepost-header">
             <h3>Popular Tags</h3>
             <hr class="rounded">
           </div>
@@ -134,7 +103,7 @@ setInterval(function(){
           <p id="tag">#keyword3</p>
           <p id="tag">#keyword4</p>
           <p id="tag">#keyword5</p>
-          <p id="tag">#keyword6</p>
+          <p id="tag">#keyword6</p> -->
         </div>
 
 

@@ -2,6 +2,19 @@
 <!DOCTYPE html>
 <html>
 <?php include "header1.php"; ?>
+<script>
+
+function checkPasswordMatch(e) {
+	if(document.getElementById("password").value != document.getElementById("password-check").value){
+		makeRed(document.getElementById("password"));
+		makeRed(document.getElementById("password-check"));
+		alert("The entered passwords do not match. Please try again.");
+		e.preventDefault();
+	}
+}
+
+</script>
+
 <?php include "header2.php"; ?>
 <?php
 

@@ -3,7 +3,7 @@
 if(isset($_SESSION['username'])){
   $logPhp = "logOut.php";
   $logBut = "Log out";
-  $user = "Welcome " . $_SESSION['username'];
+  $user = "<a class='nav-link' href='profile.php'>Welcome " . $_SESSION['username']."</a>";
 }
 else{
   $logPhp = "login.php";
@@ -17,7 +17,7 @@ echo '<header>
       <img src="../images/Untitled-1.jpg" alt="logo">
     </a>
 
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right" style="padding-top: 10px;padding-right:35px;">
       <li class="nav-item">
         <a class="nav-link" href="'.$logPhp.'">'.$logBut.'</a>
       </li>

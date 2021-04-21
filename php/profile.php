@@ -29,7 +29,6 @@ if ($error != null) {
     $lname = $row['lastName'];
     $email = $row['email'];
     $pswd = $row['password'];
-    $image = $row['image'];
   }
 }
 ?>
@@ -64,9 +63,6 @@ if ($error != null) {
                 <br>
                 Last Name:<br>
                 <input type="text" name="lastname" id="lastname" value="<?php echo $lname; ?>" class="required">
-                <br>
-                Image:<br>
-                <input type="text" name="image" id="image" value="<?php echo $image; ?>" class="required">
                 <br>
                 Email:<br>
                 <input type="text" name="email" id="email" value="<?php echo $email; ?>" class="required">

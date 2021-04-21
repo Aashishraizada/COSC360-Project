@@ -10,13 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $output = "<p>Invalid request.</p>";
     exit($output);
 } else if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['username']) && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['image']) && isset($_POST['email']) && isset($_POST['password'])) {
+    if (isset($_POST['username']) && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['password'])) {
         $uname = $_POST['username'];
         $fname = $_POST['firstname'];
         $lname = $_POST['lastname'];
         $email = $_POST['email'];
         $pswd = $_POST['password'];
-        $image = $_POST['image'];
     } else {
         $output = "<p>Invalid data input.</p>";
         exit($output);
@@ -42,7 +41,7 @@ if ($error != null) {
     //and fetch requsults
     if (mysqli_num_rows($results)) {// if user and password matches
         $row = mysqli_fetch_assoc($results);
-        $sql = "UPDATE User SET username='" . $uname . "', firstName='" . $fname . "', email='" . $email . "', password='" . $encryptedpswd . "', image='" . $image . "' WHERE username='" . $uname . "'";
+        $sql = "UPDATE User SET username='" . $uname . "', firstName='" . $fname . "', email='" . $email . "', password='" . $encryptedpswd . "' WHERE username='" . $uname . "'";
         if (mysqli_query($connection, $sql)) {
             $_SESSION['error'] =  "Your account has been updated";
             header("Location: profile.php", TRUE, 301);

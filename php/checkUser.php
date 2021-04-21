@@ -22,10 +22,10 @@ else if($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 }
 
-$host = "sql3.freesqldatabase.com";
-$database = "sql3404847";
-$user = "sql3404847";
-$password = "TuyFjKXzrh";
+$host = "mysql.aasrai.dreamhosters.com";
+$database = "myblogsite";
+$user = "cosc360";
+$password = "adminpassword";
 
 $connection = mysqli_connect($host, $user, $password, $database);
 $error = mysqli_connect_error();

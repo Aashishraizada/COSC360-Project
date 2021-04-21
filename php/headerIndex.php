@@ -38,7 +38,7 @@ echo '<header>
         <li><a href="profile.php">My Account</a></li>
         <li><a href="contact.php">Contact Us</a></li>
       </ul>
-      <form class="navbar-form navbar-right">
+      <form class="navbar-form navbar-right" id="searchForm" onsubmit="return false;">
         <div class="form-group">
           <input type="text" id="search" class="form-control" placeholder="Search">
           <select id="category" name = "dropdown" class="form-control">
